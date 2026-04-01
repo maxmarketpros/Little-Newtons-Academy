@@ -172,7 +172,7 @@ export default function WhyChooseUs() {
           </div>
           <div className="relative h-64 lg:h-auto">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12-9I7QSduJFNX4vO6c2YIlOB1oPniA4H.jpg"
+              src="/images/12.jpg"
               alt="Happy child smiling at Little Newtons Academy"
               fill
               className="object-cover"

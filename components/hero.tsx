@@ -29,7 +29,7 @@ export default function Hero() {
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[var(--brand-red)]"></span>
               </span>
               <span className="text-[var(--brand-red)] font-semibold text-sm">
-                Limited enrollment spots available for 2025
+                Limited enrollment spots available for 2026
               </span>
             </div>
 
@@ -80,10 +80,10 @@ export default function Hero() {
           {/* Right image */}
           <div className="relative hidden lg:block">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-p1Ioef5PBlSYsv0UFDmIOcb9k0fNyR.jpg"
+              src="/images/hero-image.jpg"
               alt="Happy children learning at Little Newtons Academy"
               fill
-              className="object-cover"
+              className="object-cover object-top"
               priority
             />
             <div className="absolute inset-0 bg-[var(--brand-green)]/10" />
@@ -94,7 +94,7 @@ export default function Hero() {
       {/* Mobile hero image */}
       <div className="lg:hidden relative h-64 sm:h-80 mx-6 mb-8 rounded-2xl overflow-hidden">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-GuhTF8Bv9pu0xQQ5EDagLDlvGdeJpp.jpg"
+          src="/images/4.jpg"
           alt="Happy children at Little Newtons Academy"
           fill
           className="object-cover"

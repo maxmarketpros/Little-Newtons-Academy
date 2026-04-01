@@ -11,7 +11,10 @@
       "Bash(npm install:*)",
       "Bash(magick public/logo-landscape.png -fuzz 5% -trim +repage public/logo-navbar.png)",
       "Bash(magick identify:*)",
-      "Bash(magick public/logo-landscape.png -background white -flatten -fuzz 2% -trim +repage public/logo-navbar.png)"
+      "Bash(magick public/logo-landscape.png -background white -flatten -fuzz 2% -trim +repage public/logo-navbar.png)",
+      "Bash(sed -i 's|https://hebbkx1anhila5yf\\\\.public\\\\.blob\\\\.vercel-storage\\\\.com/logo-landscape-Md67VTXKT6GLCeZDDuWo1GDrRjPSzR\\\\.png|/images/logo-navbar.png|g;:*)",
+      "Bash(__NEW_LINE_713d2de3802d642b__ echo:*)",
+      "Bash(magick public/images/logo-landscape.png -channel Alpha -fx \"a < 0.1 ? 0 : a\" +channel -trim +repage public/images/logo-footer.png)"
     ]
   }
 }

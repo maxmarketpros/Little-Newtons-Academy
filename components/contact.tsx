@@ -102,7 +102,7 @@ export default function Contact() {
             {/* Photo */}
             <div className="relative h-52 rounded-2xl overflow-hidden">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-qt93vlWiGnt3TiWNEplY9djFvGKIEY.jpg"
+                src="/images/5.jpg"
                 alt="Teacher reading to students"
                 fill
                 className="object-cover"

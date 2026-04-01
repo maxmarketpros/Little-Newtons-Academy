@@ -45,7 +45,7 @@ export default function Philosophy() {
           {/* Left: image */}
           <div className="relative rounded-3xl overflow-hidden h-80 lg:h-[520px] order-2 lg:order-1">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9-Nfge55GqsDO2BTRfGiQXyHFSIMC7Zj.jpg"
+              src="/images/9.jpg"
               alt="Children learning together in a circle"
               fill
               className="object-cover"

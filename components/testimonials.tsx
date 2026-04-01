@@ -90,7 +90,7 @@ export default function Testimonials() {
         <div className="mt-12 grid grid-cols-3 gap-4 rounded-3xl overflow-hidden h-48 sm:h-64">
           <div className="relative">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/18-UZkbGkgosYLLnptmUE3sMoVSs1oD5P.jpg"
+              src="/images/18.jpg"
               alt="Happy children at Little Newtons Academy"
               fill
               className="object-cover"
@@ -98,7 +98,7 @@ export default function Testimonials() {
           </div>
           <div className="relative">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8-DuYFvNVX9yBsN7YA9qmmHRuCMFdZ2p.jpg"
+              src="/images/8.jpg"
               alt="Two children hugging at Little Newtons Academy"
               fill
               className="object-cover"
@@ -106,7 +106,7 @@ export default function Testimonials() {
           </div>
           <div className="relative">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/15-sYZOj8tEdGFEXisxqQDln52J3T8Efe.jpg"
+              src="/images/15.jpg"
               alt="Curious child at Little Newtons Academy"
               fill
               className="object-cover"

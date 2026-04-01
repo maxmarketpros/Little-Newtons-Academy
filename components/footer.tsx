@@ -8,11 +8,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-landscape-Md67VTXKT6GLCeZDDuWo1GDrRjPSzR.png"
+              src="/images/logo-square.png"
               alt="Little Newtons Academy"
-              width={200}
-              height={55}
-              className="h-10 w-auto object-contain brightness-0 invert mb-4"
+              width={60}
+              height={60}
+              className="h-24 w-auto object-contain brightness-0 invert mb-4"
             />
             <p className="text-white/60 text-sm leading-relaxed">
               Curiosity. Discovery. Growth.
