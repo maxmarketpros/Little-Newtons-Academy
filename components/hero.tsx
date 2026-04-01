@@ -1,0 +1,106 @@
+import Image from 'next/image'
+
+export default function Hero() {
+  return (
+    <section className="relative bg-[var(--brand-cream)] overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 min-h-[calc(100vh-80px)]">
+          {/* Left content */}
+          <div className="flex flex-col justify-center px-6 sm:px-10 lg:px-16 py-16 lg:py-24">
+            <span className="inline-block text-[var(--brand-green)] font-bold text-sm tracking-widest uppercase mb-4">
+              Little Newtons Academy
+            </span>
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--foreground)] leading-tight text-balance mb-6">
+              Where Curious Minds Grow and Futures Take Shape
+            </h1>
+            <p className="text-[var(--muted-foreground)] text-lg leading-relaxed mb-4 max-w-xl">
+              You&apos;re not just looking for childcare. You&apos;re looking for a place where your child will be{' '}
+              <strong className="text-[var(--foreground)]">safe, nurtured, and truly known.</strong>
+            </p>
+            <p className="text-[var(--muted-foreground)] text-base leading-relaxed mb-8 max-w-xl">
+              At Little Newtons Academy, the early years are approached with intention. Our classrooms support social,
+              emotional, cognitive, and physical development — giving children the confidence to thrive.
+            </p>
+
+            {/* Urgency badge */}
+            <div className="flex items-center gap-2 mb-8">
+              <span className="flex h-2.5 w-2.5 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--brand-red)] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[var(--brand-red)]"></span>
+              </span>
+              <span className="text-[var(--brand-red)] font-semibold text-sm">
+                Limited enrollment spots available for 2025
+              </span>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#contact"
+                className="bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold px-8 py-4 rounded-full text-center hover:opacity-90 transition-opacity text-base"
+              >
+                Schedule a Tour Today
+              </a>
+              <a
+                href="#programs"
+                className="border-2 border-[var(--brand-green)] text-[var(--brand-green)] font-bold px-8 py-4 rounded-full text-center hover:bg-[var(--secondary)] transition-colors text-base"
+              >
+                See Our Programs
+              </a>
+            </div>
+
+            {/* Trust badges */}
+            <div className="mt-12 flex flex-wrap gap-6 items-center">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-full bg-[var(--brand-green)] flex items-center justify-center flex-shrink-0">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" className="w-4 h-4">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <span className="text-sm font-semibold text-[var(--foreground)]">DCF Licensed</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-full bg-[var(--brand-green)] flex items-center justify-center flex-shrink-0">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" className="w-4 h-4">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <span className="text-sm font-semibold text-[var(--foreground)]">VPK Certified</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-full bg-[var(--brand-green)] flex items-center justify-center flex-shrink-0">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" className="w-4 h-4">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <span className="text-sm font-semibold text-[var(--foreground)]">USDA Meals</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right image */}
+          <div className="relative hidden lg:block">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-p1Ioef5PBlSYsv0UFDmIOcb9k0fNyR.jpg"
+              alt="Happy children learning at Little Newtons Academy"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-[var(--brand-green)]/10" />
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile hero image */}
+      <div className="lg:hidden relative h-64 sm:h-80 mx-6 mb-8 rounded-2xl overflow-hidden">
+        <Image
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-GuhTF8Bv9pu0xQQ5EDagLDlvGdeJpp.jpg"
+          alt="Happy children at Little Newtons Academy"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+    </section>
+  )
+}
