@@ -8,9 +8,13 @@ import { Menu, X, Phone, MapPin } from 'lucide-react'
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [pastHero, setPastHero] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20)
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+      setPastHero(window.scrollY > window.innerHeight * 0.8)
+    }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -136,12 +140,17 @@ export default function Navbar() {
       </header>
 
       {/* Sticky mobile CTA */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden p-4 bg-[var(--background)] border-t border-[var(--border)] shadow-lg">
+      <div
+        className={`fixed bottom-0 left-0 right-0 z-50 lg:hidden px-4 pb-4 pt-3 bg-gradient-to-t from-[var(--background)] via-[var(--background)] to-transparent transition-all duration-300 ${
+          pastHero ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
+        }`}
+      >
         <a
           href="#contact"
-          className="block w-full bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold text-center py-3.5 rounded-full hover:opacity-90 transition-opacity"
+          className="flex items-center justify-center gap-2 w-full bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold text-center py-3 rounded-full shadow-lg shadow-[var(--brand-green)]/25 hover:opacity-90 transition-opacity text-sm"
         >
-          Schedule a Tour — Limited Spots Available
+          <Phone size={14} />
+          Schedule a Tour
         </a>
       </div>
     </>
