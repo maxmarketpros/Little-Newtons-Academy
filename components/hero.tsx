@@ -4,9 +4,9 @@ export default function Hero() {
   return (
     <section className="relative bg-[var(--brand-cream)] overflow-hidden">
       {/* Mobile: image-first hero */}
-      <div className="lg:hidden">
+      <div className="lg:hidden -mt-2">
         {/* Mobile hero image */}
-        <div className="relative h-72 sm:h-80">
+        <div className="relative h-64 sm:h-72">
           <Image
             src="/images/hero-image.jpg"
             alt="Happy children at Little Newtons Academy"
@@ -18,7 +18,7 @@ export default function Hero() {
         </div>
 
         {/* Mobile text content */}
-        <div className="px-6 sm:px-10 -mt-12 relative z-10 pb-12">
+        <div className="px-6 sm:px-10 -mt-16 relative z-10 pb-10">
           <span className="inline-block text-[var(--brand-green)] font-bold text-xs tracking-widest uppercase mb-3">
             Little Newtons Academy
           </span>
