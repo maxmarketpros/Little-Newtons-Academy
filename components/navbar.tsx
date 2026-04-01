@@ -56,7 +56,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex-shrink-0">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-landscape-Md67VTXKT6GLCeZDDuWo1GDrRjPSzR.png"
+                src="/logo-navbar.png"
                 alt="Little Newtons Academy"
                 width={220}
                 height={60}

@@ -3,7 +3,15 @@
     "allow": [
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git remote:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npm install:*)",
+      "Bash(magick public/logo-landscape.png -fuzz 5% -trim +repage public/logo-navbar.png)",
+      "Bash(magick identify:*)",
+      "Bash(magick public/logo-landscape.png -background white -flatten -fuzz 2% -trim +repage public/logo-navbar.png)"
     ]
   }
 }
