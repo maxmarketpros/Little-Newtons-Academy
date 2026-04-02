@@ -1,12 +1,28 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import { Phone, Mail, MapPin } from 'lucide-react'
+
+const exploreLinks = [
+  { label: 'Our Programs', href: '/programs' },
+  { label: 'Curriculum', href: '/curriculum' },
+  { label: 'A Day at Little Newtons', href: '/daily-life' },
+  { label: 'Safety & Trust', href: '/safety' },
+]
+
+const aboutLinks = [
+  { label: 'About Us', href: '/about' },
+  { label: 'Testimonials', href: '/testimonials' },
+  { label: 'Our Locations', href: '/locations' },
+  { label: 'Schedule a Tour', href: '/contact' },
+]
 
 export default function Footer() {
   return (
     <footer className="bg-[var(--foreground)] text-[var(--primary-foreground)]">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-14">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-12 gap-10 mb-12">
           {/* Brand */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-4">
             <Image
               src="/images/logo-square.png"
               alt="Little Newtons Academy"
@@ -17,7 +33,7 @@ export default function Footer() {
             <p className="text-white/60 text-sm leading-relaxed">
               Curiosity. Discovery. Growth.
             </p>
-            <p className="text-white/50 text-xs mt-3 leading-relaxed">
+            <p className="text-white/50 text-xs mt-3 leading-relaxed max-w-xs">
               Where curious minds grow, confidence begins, and futures take shape.
             </p>
             {/* Social */}
@@ -49,59 +65,80 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick links */}
-          <div>
-            <h4 className="font-bold text-sm mb-4 text-white">Quick Links</h4>
+          {/* Explore */}
+          <div className="lg:col-span-2">
+            <h4 className="font-bold text-sm mb-4 text-white">Explore</h4>
             <ul className="flex flex-col gap-2.5">
-              {[
-                { label: 'Our Programs', href: '#programs' },
-                { label: 'A Day With Us', href: '#daily-schedule' },
-                { label: 'Safety', href: '#safety' },
-                { label: 'Our Philosophy', href: '#philosophy' },
-                { label: 'Contact Us', href: '#contact' },
-              ].map((link) => (
+              {exploreLinks.map((link) => (
                 <li key={link.label}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-white/60 hover:text-white text-sm transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Heathrow */}
-          <div>
-            <h4 className="font-bold text-sm mb-4 text-white">Heathrow</h4>
-            <address className="not-italic text-white/60 text-sm leading-relaxed flex flex-col gap-1.5">
-              <span>1032 AAA Drive</span>
-              <span>Lake Mary, FL 32746</span>
-              <a href="tel:4077324413" className="text-[var(--brand-sky)] hover:underline mt-1">
-                (407) 732-4413
-              </a>
-              <a href="mailto:heathrow@littlenewtonsacademy.com" className="text-[var(--brand-sky)] hover:underline text-xs break-all">
-                heathrow@littlenewtonsacademy.com
-              </a>
-              <span className="text-white/40 text-xs">DCF License # C18SE0335</span>
-            </address>
+          {/* About */}
+          <div className="lg:col-span-2">
+            <h4 className="font-bold text-sm mb-4 text-white">About</h4>
+            <ul className="flex flex-col gap-2.5">
+              {aboutLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-white/60 hover:text-white text-sm transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          {/* Lake Mary */}
-          <div>
-            <h4 className="font-bold text-sm mb-4 text-white">Lake Mary</h4>
-            <address className="not-italic text-white/60 text-sm leading-relaxed flex flex-col gap-1.5">
-              <span>2720 W. Lake Mary Blvd</span>
-              <span>Lake Mary, FL 32746</span>
-              <a href="tel:4073231221" className="text-[var(--brand-sky)] hover:underline mt-1">
-                (407) 323-1221
-              </a>
-              <a href="mailto:lakemary@littlenewtonsacademy.com" className="text-[var(--brand-sky)] hover:underline text-xs break-all">
-                lakemary@littlenewtonsacademy.com
-              </a>
-              <span className="text-white/40 text-xs">DCF License # C18SE031</span>
-            </address>
+          {/* Locations */}
+          <div className="lg:col-span-4">
+            <h4 className="font-bold text-sm mb-4 text-white">Our Locations</h4>
+            <div className="grid sm:grid-cols-2 gap-6">
+              {/* Heathrow */}
+              <address className="not-italic text-sm flex flex-col gap-2">
+                <span className="text-white font-semibold text-xs tracking-wide uppercase">Heathrow</span>
+                <span className="text-white/50 text-xs leading-relaxed flex items-start gap-1.5">
+                  <MapPin size={12} className="flex-shrink-0 mt-0.5" />
+                  1032 AAA Drive, Lake Mary, FL 32746
+                </span>
+                <a href="tel:4077324413" className="text-[var(--brand-sky)] hover:underline text-xs flex items-center gap-1.5">
+                  <Phone size={12} />
+                  (407) 732-4413
+                </a>
+                <a href="mailto:heathrow@littlenewtonsacademy.com" className="text-[var(--brand-sky)] hover:underline text-xs flex items-center gap-1.5">
+                  <Mail size={12} />
+                  <span className="break-all">heathrow@littlenewtonsacademy.com</span>
+                </a>
+                <span className="text-white/30 text-xs">DCF License # C18SE0335</span>
+              </address>
+
+              {/* Lake Mary */}
+              <address className="not-italic text-sm flex flex-col gap-2">
+                <span className="text-white font-semibold text-xs tracking-wide uppercase">Lake Mary</span>
+                <span className="text-white/50 text-xs leading-relaxed flex items-start gap-1.5">
+                  <MapPin size={12} className="flex-shrink-0 mt-0.5" />
+                  2720 W. Lake Mary Blvd, Lake Mary, FL 32746
+                </span>
+                <a href="tel:4073231221" className="text-[var(--brand-sky)] hover:underline text-xs flex items-center gap-1.5">
+                  <Phone size={12} />
+                  (407) 323-1221
+                </a>
+                <a href="mailto:lakemary@littlenewtonsacademy.com" className="text-[var(--brand-sky)] hover:underline text-xs flex items-center gap-1.5">
+                  <Mail size={12} />
+                  <span className="break-all">lakemary@littlenewtonsacademy.com</span>
+                </a>
+                <span className="text-white/30 text-xs">DCF License # C18SE031</span>
+              </address>
+            </div>
           </div>
         </div>
 
@@ -110,9 +147,11 @@ export default function Footer() {
           <p className="text-white/40 text-xs text-center sm:text-left">
             &copy; {new Date().getFullYear()} Little Newtons Academy. All rights reserved.
           </p>
-          <p className="text-white/40 text-xs">
-            Serving Lake Mary & Heathrow, Florida
-          </p>
+          <div className="flex items-center gap-4">
+            <span className="text-white/40 text-xs">
+              Serving Lake Mary & Heathrow, Florida
+            </span>
+          </div>
         </div>
       </div>
     </footer>

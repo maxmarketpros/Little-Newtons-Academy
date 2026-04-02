@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Nunito, Lora } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import Navbar from '@/components/navbar'
+import Footer from '@/components/footer'
 import './globals.css'
 
 const nunito = Nunito({
@@ -53,7 +55,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${nunito.variable} ${lora.variable}`}>
       <body className="font-sans antialiased">
-        {children}
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
         <Analytics />
       </body>
     </html>
