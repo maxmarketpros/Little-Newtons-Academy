@@ -87,27 +87,27 @@ export default function Testimonials() {
         </div>
 
         {/* Image row */}
-        <div className="mt-12 grid grid-cols-3 gap-4 rounded-3xl overflow-hidden h-48 sm:h-64">
-          <div className="relative">
+        <div className="mt-12 grid grid-cols-3 gap-4 rounded-3xl overflow-hidden">
+          <div className="relative aspect-[4/3]">
             <Image
-              src="/images/18.jpg"
-              alt="Happy children at Little Newtons Academy"
+              src="/images/playground-friends.jpg"
+              alt="Two children smiling at Little Newtons Academy"
               fill
               className="object-cover"
             />
           </div>
-          <div className="relative">
+          <div className="relative aspect-[4/3]">
             <Image
-              src="/images/8.jpg"
-              alt="Two children hugging at Little Newtons Academy"
+              src="/images/playground-jumping.jpg"
+              alt="Children jumping and playing at Little Newtons Academy"
               fill
               className="object-cover"
             />
           </div>
-          <div className="relative">
+          <div className="relative aspect-[4/3]">
             <Image
-              src="/images/15.jpg"
-              alt="Curious child at Little Newtons Academy"
+              src="/images/playground-sensory.jpg"
+              alt="Children doing sensory play at Little Newtons Academy"
               fill
               className="object-cover"
             />

@@ -6,10 +6,10 @@ export default function ImageShowcase() {
       {/* Rounded image container */}
       <div className="relative h-[45vh] sm:h-[50vh] rounded-3xl overflow-hidden shadow-2xl">
         <Image
-          src="/images/1.jpg"
-          alt="Children enjoying activities at Little Newtons Academy"
+          src="/images/playground-adventure.jpg"
+          alt="Children playing and dancing outdoors at Little Newtons Academy"
           fill
-          className="object-cover object-left-top"
+          className="object-cover object-top"
         />
         {/* Darker overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--brand-green)]/70 via-[var(--brand-green)]/40 to-transparent" />

@@ -43,10 +43,10 @@ export default function Philosophy() {
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: image */}
-          <div className="relative rounded-3xl overflow-hidden h-80 lg:h-[520px] order-2 lg:order-1">
+          <div className="relative rounded-3xl overflow-hidden aspect-square lg:aspect-auto lg:h-[520px] order-2 lg:order-1">
             <Image
-              src="/images/9.jpg"
-              alt="Children learning together in a circle"
+              src="/images/music-group.jpg"
+              alt="Children in a music and movement activity"
               fill
               className="object-cover"
             />

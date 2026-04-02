@@ -170,10 +170,10 @@ export default function WhyChooseUs() {
               Schedule Your Tour Today
             </a>
           </div>
-          <div className="relative h-64 lg:h-auto">
+          <div className="relative aspect-[4/3] lg:aspect-auto lg:h-auto">
             <Image
-              src="/images/12.jpg"
-              alt="Happy child smiling at Little Newtons Academy"
+              src="/images/facility-play-structure.jpg"
+              alt="Colorful play structure at Little Newtons Academy"
               fill
               className="object-cover"
             />

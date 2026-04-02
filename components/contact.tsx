@@ -100,12 +100,13 @@ export default function Contact() {
             </div>
 
             {/* Photo */}
-            <div className="relative h-52 rounded-2xl overflow-hidden">
+            <div className="relative aspect-[3/2] sm:aspect-[4/3] rounded-2xl overflow-hidden">
               <Image
-                src="/images/5.jpg"
-                alt="Teacher reading to students"
+                src="/images/playground-picnic.jpg"
+                alt="Children enjoying time together outdoors"
                 fill
                 className="object-cover"
+                style={{ objectPosition: 'center 30%' }}
               />
             </div>
           </div>

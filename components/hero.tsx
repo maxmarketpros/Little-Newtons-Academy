@@ -8,7 +8,7 @@ export default function Hero() {
         {/* Mobile hero image */}
         <div className="relative h-64 sm:h-72">
           <Image
-            src="/images/hero-image.jpg"
+            src="/images/playground-group.jpg"
             alt="Happy children at Little Newtons Academy"
             fill
             className="object-cover object-top"
@@ -140,7 +140,7 @@ export default function Hero() {
           {/* Right image */}
           <div className="relative">
             <Image
-              src="/images/hero-image.jpg"
+              src="/images/playground-group.jpg"
               alt="Happy children learning at Little Newtons Academy"
               fill
               className="object-cover object-top"

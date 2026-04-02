@@ -5,43 +5,43 @@ const schedule = [
     time: 'Morning',
     title: 'Healthy Start',
     description: 'Children begin the day with a fresh, nutritious breakfast that supports focus, energy, and healthy habits.',
-    image: '/images/5.jpg',
-    imageAlt: 'Teacher reading to children during circle time',
+    image: '/images/daily-healthy-start.jpg',
+    imageAlt: 'Fresh fruits and nutritious foods for a healthy start',
   },
   {
     time: 'Morning Circle',
     title: 'Circle Time',
     description: 'The day begins together as children gather with their teacher to greet classmates, explore early literacy and math, and build language skills.',
-    image: '/images/4.jpg',
-    imageAlt: 'Children sitting in circle with teacher',
+    image: '/images/daily-circle-time.jpg',
+    imageAlt: 'Children and teachers gathered in a circle on the grass',
   },
   {
     time: 'Mid-Morning',
     title: 'Learning Centers',
     description: 'Children rotate through hands-on learning centers: art, reading, building, science discovery, and sensory play guided by teachers.',
-    image: '/images/10.jpg',
-    imageAlt: 'Children doing arts and crafts at learning center',
+    image: '/images/science-experiment.jpg',
+    imageAlt: 'Children doing a hands-on science experiment',
   },
   {
     time: 'Late Morning',
     title: 'Outdoor Play',
     description: 'Active outdoor time lets children run, climb, build friendships, and develop motor skills through group games and nature exploration.',
-    image: '/images/9.jpg',
-    imageAlt: 'Children playing outdoors together',
+    image: '/images/daily-outdoor-play.jpg',
+    imageAlt: 'Child playing with bubbles on the playground',
   },
   {
     time: 'Midday',
     title: 'Lunch & Rest',
     description: 'Children enjoy a healthy lunch, then have quiet rest or nap time to recharge after an active morning of learning.',
-    image: '/images/19.jpg',
-    imageAlt: 'Educational play materials in the classroom',
+    image: '/images/daily-lunch-rest.jpg',
+    imageAlt: 'Children enjoying a healthy lunch together',
   },
   {
     time: 'Afternoon',
     title: 'Afternoon Exploration',
     description: 'Creative activities, learning centers, and play continue into the afternoon, reinforcing skills and building on the morning\'s discoveries.',
-    image: '/images/17.jpg',
-    imageAlt: 'Child drawing and coloring in the classroom',
+    image: '/images/10.jpg',
+    imageAlt: 'Children exploring and playing during afternoon activities',
   },
 ]
 
@@ -68,7 +68,7 @@ export default function DailySchedule() {
               key={item.title}
               className="group rounded-2xl overflow-hidden border border-[var(--border)] bg-[var(--background)] hover:shadow-lg transition-shadow"
             >
-              <div className="relative h-52 overflow-hidden">
+              <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src={item.image}
                   alt={item.imageAlt}

@@ -13,8 +13,8 @@ const steps = [
       'Begin early language and motor development',
     ],
     tagline: 'A foundation of trust, comfort, and care',
-    image: '/images/11.jpg',
-    imageAlt: 'Baby exploring in a nurturing classroom',
+    image: '/images/facility-infant-room.jpg',
+    imageAlt: 'Little Newtons infant and toddler room',
     color: 'var(--brand-sky)',
     bg: '#eef9fc',
   },
@@ -30,8 +30,8 @@ const steps = [
       'Learn to interact and build social skills',
     ],
     tagline: 'Curiosity turns into confidence',
-    image: '/images/3.jpg',
-    imageAlt: 'Toddler exploring with an abacus',
+    image: '/images/science-goggles.jpg',
+    imageAlt: 'Child with safety goggles doing a science experiment',
     color: 'var(--brand-lime)',
     bg: '#f4fbed',
   },
@@ -47,8 +47,8 @@ const steps = [
       'Grow socially through teamwork and play',
     ],
     tagline: 'Confidence in learning begins here',
-    image: '/images/10.jpg',
-    imageAlt: 'Preschool children doing arts and crafts',
+    image: '/images/facility-classroom.jpg',
+    imageAlt: 'Little Newtons bright classroom with learning centers',
     color: 'var(--brand-green)',
     bg: '#edf7ef',
   },
@@ -64,8 +64,8 @@ const steps = [
       'Independence and classroom confidence',
     ],
     tagline: 'Fully prepared for kindergarten success',
-    image: '/images/2.jpg',
-    imageAlt: 'VPK children engaging with a teacher',
+    image: '/images/playground-confident.jpg',
+    imageAlt: 'Confident child smiling at playground',
     color: '#e07c3a',
     bg: '#fef4ec',
   },
@@ -115,12 +115,12 @@ export default function Programs() {
                   className="rounded-2xl overflow-hidden flex flex-col h-full"
                   style={{ backgroundColor: step.bg }}
                 >
-                  <div className="relative h-44 w-full">
+                  <div className="relative aspect-[4/3] w-full">
                     <Image
                       src={step.image}
                       alt={step.imageAlt}
                       fill
-                      className="object-cover"
+                      className="object-cover object-top"
                     />
                     <div
                       className="absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full text-[var(--primary-foreground)]"
