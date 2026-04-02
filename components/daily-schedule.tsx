@@ -75,7 +75,7 @@ export default function DailySchedule() {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-[var(--foreground)]/20" />
+                <div className="absolute inset-0 bg-black/5" />
                 <span className="absolute top-4 left-4 bg-[var(--brand-green)] text-[var(--primary-foreground)] text-xs font-bold px-3 py-1.5 rounded-full">
                   {item.time}
                 </span>

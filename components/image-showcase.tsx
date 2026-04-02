@@ -9,7 +9,7 @@ export default function ImageShowcase() {
           src="/images/playground-adventure.jpg"
           alt="Children playing and dancing outdoors at Little Newtons Academy"
           fill
-          className="object-cover object-top"
+          className="object-cover object-center"
         />
         {/* Darker overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--brand-green)]/70 via-[var(--brand-green)]/40 to-transparent" />
