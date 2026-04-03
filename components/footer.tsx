@@ -40,6 +40,17 @@ export default function Footer() {
             {/* Social */}
             <div className="flex gap-3 mt-5">
               <a
+                href="https://www.facebook.com/people/Little-Newtons-Academy-Heathrow/61574696905979/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-[var(--brand-green)] flex items-center justify-center transition-colors"
+                aria-label="Facebook"
+              >
+                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
+              </a>
+              <a
                 href="https://www.instagram.com/littlenewtons_heathrow/"
                 target="_blank"
                 rel="noopener noreferrer"
