@@ -48,70 +48,19 @@ export default function Contact() {
     <section id="contact" className="py-20 bg-[var(--brand-cream)]">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Left info */}
+          {/* Left: heading + form */}
           <div>
             <span className="inline-block text-[var(--brand-sky)] font-bold text-sm tracking-widest uppercase mb-4">
               Get in Touch
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[var(--foreground)] text-balance mb-6 leading-tight">
-              Schedule a Tour or Contact Us About Enrollment
+              Schedule Your Visit Today
             </h2>
             <p className="text-[var(--muted-foreground)] leading-relaxed mb-10">
               We&apos;d love to meet your family. Fill out the form and our team will reach out to schedule your
               personalized tour. Spots are limited — don&apos;t wait!
             </p>
 
-            {/* Locations */}
-            <div className="flex flex-col gap-6 mb-10">
-              <div className="p-6 bg-[var(--background)] rounded-2xl border border-[var(--border)]">
-                <h3 className="font-bold text-[var(--foreground)] mb-3 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[var(--brand-green)]" />
-                  Heathrow Location
-                </h3>
-                <address className="not-italic text-[var(--muted-foreground)] text-sm leading-relaxed">
-                  1032 AAA Drive<br />
-                  Lake Mary, FL 32746<br />
-                  <a href="tel:4077324413" className="text-[var(--brand-green)] font-semibold hover:underline mt-1 block">
-                    (407) 732-4413
-                  </a>
-                  <a href="mailto:heathrow@littlenewtonsacademy.com" className="text-[var(--brand-green)] font-semibold hover:underline block">
-                    heathrow@littlenewtonsacademy.com
-                  </a>
-                  <span className="text-xs mt-1 block">DCF License # C18SE0335</span>
-                </address>
-              </div>
-              <div className="p-6 bg-[var(--background)] rounded-2xl border border-[var(--border)]">
-                <h3 className="font-bold text-[var(--foreground)] mb-3 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[var(--brand-sky)]" />
-                  Lake Mary Location
-                </h3>
-                <address className="not-italic text-[var(--muted-foreground)] text-sm leading-relaxed">
-                  2720 W. Lake Mary Blvd<br />
-                  Lake Mary, FL 32746<br />
-                  <a href="tel:4073231221" className="text-[var(--brand-green)] font-semibold hover:underline mt-1 block">
-                    (407) 323-1221
-                  </a>
-                  <a href="mailto:lakemary@littlenewtonsacademy.com" className="text-[var(--brand-green)] font-semibold hover:underline block">
-                    lakemary@littlenewtonsacademy.com
-                  </a>
-                  <span className="text-xs mt-1 block">DCF License # C18SE031</span>
-                </address>
-              </div>
-            </div>
-
-            {/* Photo */}
-            <div className="relative aspect-[3/2] sm:aspect-[4/3] rounded-2xl overflow-hidden">
-              <Image
-                src="/images/playground-picnic.jpg"
-                alt="Children enjoying time together outdoors"
-                fill
-                className="object-cover"
-                style={{ objectPosition: 'center 30%' }}
-              />
-            </div>
-          </div>
-
-          {/* Right form */}
           <div className="bg-[var(--background)] rounded-3xl p-8 shadow-sm border border-[var(--border)]">
             {submitted ? (
               <div className="text-center py-12">
@@ -258,6 +207,58 @@ export default function Contact() {
                 </form>
               </>
             )}
+          </div>
+          </div>
+
+          {/* Right: locations + photo */}
+          <div>
+            {/* Locations */}
+            <div className="flex flex-col gap-6 mb-10">
+              <div className="p-6 bg-[var(--background)] rounded-2xl border border-[var(--border)]">
+                <h3 className="font-bold text-[var(--foreground)] mb-3 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[var(--brand-green)]" />
+                  Heathrow Location
+                </h3>
+                <address className="not-italic text-[var(--muted-foreground)] text-sm leading-relaxed">
+                  1032 AAA Drive<br />
+                  Lake Mary, FL 32746<br />
+                  <a href="tel:4077324413" className="text-[var(--brand-green)] font-semibold hover:underline mt-1 block">
+                    (407) 732-4413
+                  </a>
+                  <a href="mailto:heathrow@littlenewtonsacademy.com" className="text-[var(--brand-green)] font-semibold hover:underline block">
+                    heathrow@littlenewtonsacademy.com
+                  </a>
+                  <span className="text-xs mt-1 block">DCF License # C18SE0335</span>
+                </address>
+              </div>
+              <div className="p-6 bg-[var(--background)] rounded-2xl border border-[var(--border)]">
+                <h3 className="font-bold text-[var(--foreground)] mb-3 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[var(--brand-sky)]" />
+                  Lake Mary Location
+                </h3>
+                <address className="not-italic text-[var(--muted-foreground)] text-sm leading-relaxed">
+                  2720 W. Lake Mary Blvd<br />
+                  Lake Mary, FL 32746<br />
+                  <a href="tel:4073231221" className="text-[var(--brand-green)] font-semibold hover:underline mt-1 block">
+                    (407) 323-1221
+                  </a>
+                  <a href="mailto:lakemary@littlenewtonsacademy.com" className="text-[var(--brand-green)] font-semibold hover:underline block">
+                    lakemary@littlenewtonsacademy.com
+                  </a>
+                  <span className="text-xs mt-1 block">DCF License # C18SE031</span>
+                </address>
+              </div>
+            </div>
+
+            {/* Photo */}
+            <div className="relative aspect-[3/2] sm:aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src="/images/client-facility-1.jpg"
+                alt="Little Newtons Academy facility"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
