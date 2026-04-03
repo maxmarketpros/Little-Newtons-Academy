@@ -1,192 +1,211 @@
-import Contact from '@/components/contact'
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion'
+'use client'
 
-export const metadata = {
-  title: 'Schedule a Tour | Contact Us | Little Newtons Academy Lake Mary FL',
-  description:
-    'Schedule a tour at Little Newtons Academy. Contact us about enrollment for Infant, Toddler, Preschool, and VPK programs in Lake Mary and Heathrow, FL.',
-}
+import { useState } from 'react'
+import Link from 'next/link'
+import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 
-const faqs = [
-  {
-    question: 'What ages do you serve?',
-    answer:
-      'We welcome children from 6 weeks through VPK (age 4). Our programs include Infant (6 weeks–12 months), Young Toddler (12–18 months), Toddler (18 months–2 years), Preschool (3-year-olds), and VPK (4-year-olds).',
-  },
-  {
-    question: 'What is VPK and do you offer it?',
-    answer:
-      "VPK (Voluntary Prekindergarten) is Florida's free early education program for 4-year-olds. Yes, we are a certified VPK provider at both our Heathrow and Lake Mary locations. VPK helps prepare your child for kindergarten with a strong academic and social-emotional foundation.",
-  },
-  {
-    question: 'Do you provide meals?',
-    answer:
-      'Yes! We participate in the USDA Child Care Food Program (CCFP). Children receive a nutritious breakfast, lunch, and snacks daily — all prepared fresh and included in tuition at no additional cost.',
-  },
-  {
-    question: 'What are your hours of operation?',
-    answer:
-      'Both locations are open Monday through Friday. Please contact us for specific hours at each campus. We offer full-day programs designed to accommodate working families.',
-  },
-  {
-    question: 'How do I enroll my child?',
-    answer:
-      "Enrollment starts with a tour! Fill out the form above or call us to schedule a visit. During the tour, you'll meet our teachers, see the classrooms, and learn about our programs. We'll then walk you through the enrollment paperwork and answer any questions.",
-  },
-  {
-    question: 'What is your teacher-to-child ratio?',
-    answer:
-      'We maintain ratios that meet or exceed Florida DCF requirements. Our small class sizes ensure every child receives individual attention, guidance, and care throughout the day.',
-  },
-  {
-    question: 'What curriculum do you use?',
-    answer:
-      'We use the Creative Curriculum, a nationally recognized research-based framework. Our approach integrates STEAM learning (Science, Technology, Engineering, Art, and Math) with hands-on exploration and guided discovery.',
-  },
-  {
-    question: 'Is there a waitlist?',
-    answer:
-      'Enrollment availability varies by program and location. We recommend scheduling a tour as soon as possible to secure your spot. Contact us to check current availability for your child\'s age group.',
-  },
-]
-
-const tourSteps = [
-  {
-    number: '1',
-    title: 'Welcome & Meet Our Team',
-    description:
-      "You'll be greeted by our team and introduced to the teachers who will be part of your child's daily experience.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
-        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-        <circle cx="12" cy="7" r="4" />
-      </svg>
-    ),
-  },
-  {
-    number: '2',
-    title: 'Tour Our Classrooms',
-    description:
-      "Walk through our age-appropriate classrooms, learning centers, and outdoor play areas to see where your child will learn and grow.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
-        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-        <polyline points="9 22 9 12 15 12 15 22" />
-      </svg>
-    ),
-  },
-  {
-    number: '3',
-    title: 'Learn About Our Programs',
-    description:
-      "We'll walk you through the Creative Curriculum, our STEAM approach, daily schedules, and what your child will experience at each stage.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
-        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-      </svg>
-    ),
-  },
-  {
-    number: '4',
-    title: 'Ask Questions & Enroll',
-    description:
-      "Have all your questions answered, discuss enrollment options, and take the first step toward giving your child an exceptional start.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
-        <path d="M9 11l3 3L22 4" />
-        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
-      </svg>
-    ),
-  },
-]
+const inputClass =
+  'w-full px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)] text-sm focus:outline-none focus:ring-2 focus:ring-[var(--brand-green)] transition-shadow placeholder:text-[var(--muted-foreground)]'
 
 export default function ContactPage() {
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    setSubmitted(true)
+  }
+
   return (
     <>
       {/* Hero */}
       <section className="py-16 bg-[var(--brand-cream)]">
         <div className="max-w-3xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
           <span className="inline-block text-[var(--brand-sky)] font-bold text-sm tracking-widest uppercase mb-4">
-            Get in Touch
+            Contact Us
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[var(--foreground)] text-balance mb-6">
-            Schedule a Tour at Little Newtons Academy
+            Get in Touch with Little Newtons Academy
           </h1>
           <p className="text-[var(--muted-foreground)] text-lg leading-relaxed">
-            See our classrooms, meet our teachers, and discover why families across Lake Mary and Heathrow
-            trust us with their children&apos;s early education.
+            Have a question or want to learn more? We&apos;d love to hear from you. Reach out to either of our locations or send us a message below.
           </p>
         </div>
       </section>
 
-      {/* Contact form (reusing existing component) */}
-      <Contact />
-
-      {/* What to expect on your tour */}
+      {/* Contact Info + Form */}
       <section className="py-20 bg-[var(--background)]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="text-center mb-14">
-            <span className="inline-block text-[var(--brand-sky)] font-bold text-sm tracking-widest uppercase mb-4">
-              Your Visit
-            </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[var(--foreground)] text-balance mb-4">
-              What to Expect on Your Tour
-            </h2>
-            <p className="text-[var(--muted-foreground)] max-w-2xl mx-auto leading-relaxed">
-              A tour at Little Newtons Academy is your chance to see our programs in action and find the perfect fit for your family.
-            </p>
-          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Left: Contact Info */}
+            <div>
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[var(--foreground)] mb-8">
+                Our Locations
+              </h2>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {tourSteps.map((step) => (
-              <div
-                key={step.number}
-                className="text-center p-6 rounded-2xl border border-[var(--border)] bg-[var(--background)] hover:shadow-md transition-shadow"
-              >
-                <div className="w-10 h-10 rounded-full bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold text-sm flex items-center justify-center mx-auto mb-4">
-                  {step.number}
+              <div className="flex flex-col gap-6 mb-10">
+                {/* Heathrow */}
+                <div className="p-6 bg-[var(--background)] rounded-2xl border border-[var(--border)]">
+                  <h3 className="font-bold text-[var(--foreground)] mb-4 flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[var(--brand-green)]" />
+                    Heathrow Campus
+                  </h3>
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-start gap-3 text-[var(--muted-foreground)] text-sm">
+                      <MapPin size={16} className="text-[var(--brand-green)] flex-shrink-0 mt-0.5" />
+                      <span>1032 AAA Drive, Lake Mary, FL 32746</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-sm">
+                      <Phone size={16} className="text-[var(--brand-green)] flex-shrink-0" />
+                      <a href="tel:4077324413" className="text-[var(--brand-green)] font-semibold hover:underline">
+                        (407) 732-4413
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-3 text-sm">
+                      <Mail size={16} className="text-[var(--brand-green)] flex-shrink-0" />
+                      <a href="mailto:heathrow@littlenewtonsacademy.com" className="text-[var(--brand-green)] font-semibold hover:underline">
+                        heathrow@littlenewtonsacademy.com
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <div className="w-12 h-12 rounded-xl bg-[var(--secondary)] text-[var(--brand-green)] flex items-center justify-center mx-auto mb-4">
-                  {step.icon}
+
+                {/* Lake Mary */}
+                <div className="p-6 bg-[var(--background)] rounded-2xl border border-[var(--border)]">
+                  <h3 className="font-bold text-[var(--foreground)] mb-4 flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[var(--brand-sky)]" />
+                    Lake Mary Campus
+                  </h3>
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-start gap-3 text-[var(--muted-foreground)] text-sm">
+                      <MapPin size={16} className="text-[var(--brand-green)] flex-shrink-0 mt-0.5" />
+                      <span>2720 W. Lake Mary Blvd, Lake Mary, FL 32746</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-sm">
+                      <Phone size={16} className="text-[var(--brand-green)] flex-shrink-0" />
+                      <a href="tel:4073231221" className="text-[var(--brand-green)] font-semibold hover:underline">
+                        (407) 323-1221
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-3 text-sm">
+                      <Mail size={16} className="text-[var(--brand-green)] flex-shrink-0" />
+                      <a href="mailto:lakemary@littlenewtonsacademy.com" className="text-[var(--brand-green)] font-semibold hover:underline">
+                        lakemary@littlenewtonsacademy.com
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="font-bold text-[var(--foreground)] mb-2">{step.title}</h3>
-                <p className="text-[var(--muted-foreground)] text-sm leading-relaxed">{step.description}</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* FAQ */}
-      <section className="py-20 bg-[var(--brand-cream)]">
-        <div className="max-w-3xl mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="text-center mb-14">
-            <span className="inline-block text-[var(--brand-sky)] font-bold text-sm tracking-widest uppercase mb-4">
-              Common Questions
-            </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[var(--foreground)] text-balance mb-4">
-              Frequently Asked Questions
-            </h2>
-          </div>
+              {/* Hours */}
+              <div className="flex items-start gap-3 mb-8 p-4 bg-[var(--secondary)] rounded-xl">
+                <Clock size={18} className="text-[var(--brand-green)] flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-bold text-[var(--foreground)] text-sm mb-1">Hours of Operation</p>
+                  <p className="text-[var(--muted-foreground)] text-sm">Monday – Friday. Contact us for specific hours at each campus.</p>
+                </div>
+              </div>
 
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-b border-[var(--border)]">
-                <AccordionTrigger className="text-left font-semibold text-[var(--foreground)] py-5 hover:no-underline">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-[var(--muted-foreground)] leading-relaxed pb-5">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+              {/* Tour CTA */}
+              <div className="p-6 bg-[var(--brand-cream)] rounded-2xl">
+                <p className="font-bold text-[var(--foreground)] mb-2">Looking to schedule a tour?</p>
+                <p className="text-[var(--muted-foreground)] text-sm mb-4">
+                  Visit our dedicated tour page to book a visit and learn about enrollment options.
+                </p>
+                <Link
+                  href="/schedule-a-tour"
+                  className="inline-block bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold text-sm px-6 py-3 rounded-full hover:opacity-90 transition-opacity"
+                >
+                  Schedule a Tour
+                </Link>
+              </div>
+            </div>
+
+            {/* Right: Simple Form */}
+            <div className="bg-[var(--background)] rounded-3xl p-8 shadow-sm border border-[var(--border)]">
+              {submitted ? (
+                <div className="text-center py-12">
+                  <div className="w-16 h-16 rounded-full bg-[var(--secondary)] text-[var(--brand-green)] flex items-center justify-center mx-auto mb-6">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-8 h-8">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </div>
+                  <h3 className="font-serif text-2xl font-bold text-[var(--foreground)] mb-3">
+                    Message Sent!
+                  </h3>
+                  <p className="text-[var(--muted-foreground)] leading-relaxed">
+                    Thank you for reaching out. We&apos;ll get back to you within 1 business day.
+                  </p>
+                </div>
+              ) : (
+                <>
+                  <h3 className="font-bold text-[var(--foreground)] text-xl mb-2">
+                    Send Us a Message
+                  </h3>
+                  <p className="text-[var(--muted-foreground)] text-sm mb-6">
+                    Fill out the form below and our team will get back to you promptly.
+                  </p>
+
+                  <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div className="flex flex-col gap-1.5">
+                        <label htmlFor="name" className="text-sm font-semibold text-[var(--foreground)]">
+                          Full Name <span className="text-[var(--brand-red)]">*</span>
+                        </label>
+                        <input id="name" type="text" required placeholder="Your name" className={inputClass} />
+                      </div>
+                      <div className="flex flex-col gap-1.5">
+                        <label htmlFor="phone" className="text-sm font-semibold text-[var(--foreground)]">
+                          Phone Number
+                        </label>
+                        <input id="phone" type="tel" placeholder="(407) 000-0000" className={inputClass} />
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col gap-1.5">
+                      <label htmlFor="email" className="text-sm font-semibold text-[var(--foreground)]">
+                        Email Address <span className="text-[var(--brand-red)]">*</span>
+                      </label>
+                      <input id="email" type="email" required placeholder="you@example.com" className={inputClass} />
+                    </div>
+
+                    <div className="flex flex-col gap-1.5">
+                      <label htmlFor="subject" className="text-sm font-semibold text-[var(--foreground)]">
+                        Subject
+                      </label>
+                      <select id="subject" className={inputClass}>
+                        <option value="">Select a topic...</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="enrollment">Enrollment Questions</option>
+                        <option value="programs">Programs & Curriculum</option>
+                        <option value="billing">Tuition & Billing</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+
+                    <div className="flex flex-col gap-1.5">
+                      <label htmlFor="message" className="text-sm font-semibold text-[var(--foreground)]">
+                        Message <span className="text-[var(--brand-red)]">*</span>
+                      </label>
+                      <textarea
+                        id="message"
+                        rows={5}
+                        required
+                        placeholder="How can we help you?"
+                        className={`${inputClass} resize-none`}
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="w-full bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold py-4 rounded-xl hover:opacity-90 transition-opacity text-base mt-2"
+                    >
+                      Send Message
+                    </button>
+                  </form>
+                </>
+              )}
+            </div>
+          </div>
         </div>
       </section>
     </>

@@ -110,7 +110,7 @@ export default function CurriculumPage() {
                 At Little Newtons Academy, early learning is approached with intention, care, and a commitment to excellence. Grounded in the Creative Curriculum framework with STEAM integration, we nurture intellectual growth, confidence, and a lifelong love of learning.
               </p>
               <Link
-                href="/contact"
+                href="/schedule-a-tour"
                 className="inline-block bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
               >
                 Schedule a Tour

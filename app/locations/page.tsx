@@ -157,7 +157,7 @@ export default function LocationsPage() {
               </div>
               <p className="text-[var(--muted-foreground)] text-xs mb-6">DCF License # C18SE0335</p>
               <Link
-                href="/contact"
+                href="/schedule-a-tour"
                 className="inline-block bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
               >
                 Schedule a Tour at Heathrow
@@ -233,7 +233,7 @@ export default function LocationsPage() {
               </div>
               <p className="text-[var(--muted-foreground)] text-xs mb-6">DCF License # C18SE031</p>
               <Link
-                href="/contact"
+                href="/schedule-a-tour"
                 className="inline-block bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
               >
                 Schedule a Tour at Lake Mary

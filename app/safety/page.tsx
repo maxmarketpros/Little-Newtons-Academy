@@ -156,7 +156,7 @@ export default function SafetyPage() {
                 ))}
               </div>
               <Link
-                href="/contact"
+                href="/schedule-a-tour"
                 className="inline-block bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
               >
                 Schedule a Tour

@@ -13,7 +13,8 @@ const aboutLinks = [
   { label: 'About Us', href: '/about' },
   { label: 'Testimonials', href: '/testimonials' },
   { label: 'Our Locations', href: '/locations' },
-  { label: 'Schedule a Tour', href: '/contact' },
+  { label: 'Contact Us', href: '/contact' },
+  { label: 'Schedule a Tour', href: '/schedule-a-tour' },
 ]
 
 export default function Footer() {

@@ -18,6 +18,7 @@ const navLinks = [
   { label: 'About', href: '/about' },
   { label: 'Testimonials', href: '/testimonials' },
   { label: 'Locations', href: '/locations' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 export default function Navbar() {
@@ -176,7 +177,7 @@ export default function Navbar() {
             {/* CTA Button */}
             <div className="hidden lg:flex items-center gap-3">
               <Link
-                href="/contact"
+                href="/schedule-a-tour"
                 className="bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold text-sm px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity"
               >
                 Schedule a Tour
@@ -251,7 +252,7 @@ export default function Navbar() {
                 )
               )}
               <Link
-                href="/contact"
+                href="/schedule-a-tour"
                 className="mt-2 bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold text-center py-3 rounded-full hover:opacity-90 transition-opacity"
                 onClick={() => setIsOpen(false)}
               >
@@ -279,7 +280,7 @@ export default function Navbar() {
         }`}
       >
         <Link
-          href="/contact"
+          href="/schedule-a-tour"
           className="flex items-center justify-center gap-2 w-full bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold text-center py-3 rounded-full shadow-lg shadow-[var(--brand-green)]/25 hover:opacity-90 transition-opacity text-sm"
         >
           <Phone size={14} />

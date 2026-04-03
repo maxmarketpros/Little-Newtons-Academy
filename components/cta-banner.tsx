@@ -11,7 +11,7 @@ export default function CTABanner({
   heading = 'Schedule a Tour Today',
   description = 'Every great future starts with the right foundation. Meet our teachers, explore our classrooms, and see how Little Newtons Academy helps children grow with confidence, curiosity, and joy.',
   buttonText = 'Schedule Your Tour',
-  buttonHref = '/contact',
+  buttonHref = '/schedule-a-tour',
 }: CTABannerProps) {
   return (
     <section className="py-20 bg-[var(--brand-cream)]">
@@ -30,12 +30,12 @@ export default function CTABanner({
             >
               {buttonText}
             </Link>
-            <a
-              href="tel:4077324413"
+            <Link
+              href="/contact"
               className="text-white/80 font-semibold hover:text-white transition-colors text-sm"
             >
-              Or call (407) 732-4413
-            </a>
+              Get in Touch
+            </Link>
           </div>
         </div>
       </div>
