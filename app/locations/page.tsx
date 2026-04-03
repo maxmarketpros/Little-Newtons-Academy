@@ -235,7 +235,7 @@ export default function LocationsPage() {
             <div className="lg:order-2">
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/client-facility-7.jpg"
+                  src="/images/lake-mary-campus.png"
                   alt="Little Newtons Academy Lake Mary campus"
                   fill
                   className="object-cover"
