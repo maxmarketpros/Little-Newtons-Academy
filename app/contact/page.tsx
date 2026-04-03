@@ -194,11 +194,11 @@ export default function ContactPage() {
                       </label>
                       <select id="subject" name="subject" className={inputClass}>
                         <option value="">Select a topic...</option>
-                        <option value="general">General Inquiry</option>
-                        <option value="enrollment">Enrollment Questions</option>
-                        <option value="programs">Programs & Curriculum</option>
-                        <option value="billing">Tuition & Billing</option>
-                        <option value="other">Other</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Enrollment Questions">Enrollment Questions</option>
+                        <option value="Programs & Curriculum">Programs & Curriculum</option>
+                        <option value="Tuition & Billing">Tuition & Billing</option>
+                        <option value="Other">Other</option>
                       </select>
                     </div>
 
