@@ -102,7 +102,7 @@ export default function Navbar() {
                 alt="Little Newtons Academy"
                 width={220}
                 height={60}
-                className="h-10 md:h-12 w-auto object-contain"
+                className="h-14 md:h-[4.5rem] w-auto object-contain"
                 priority
               />
             </Link>

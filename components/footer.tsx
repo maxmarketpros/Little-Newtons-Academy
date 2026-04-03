@@ -27,8 +27,8 @@ export default function Footer() {
             <Image
               src="/images/logo-square.png"
               alt="Little Newtons Academy"
-              width={60}
-              height={60}
+              width={90}
+              height={90}
               className="h-24 w-auto object-contain brightness-0 invert mb-4"
             />
             <p className="text-white/60 text-sm leading-relaxed">
