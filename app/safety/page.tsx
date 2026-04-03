@@ -1,11 +1,21 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import CTABanner from '@/components/cta-banner'
+import JsonLd from '@/components/json-ld'
+import { buildBreadcrumbs } from '@/lib/seo'
 
-export const metadata = {
-  title: 'Safety & Trust | Licensed & Secure Childcare | Little Newtons Academy Lake Mary',
+export const metadata: Metadata = {
+  title: 'Safety & Trust - Licensed & Secure Childcare',
   description:
     "Your child's safety is our highest priority. DCF-licensed, 24hr cameras, CPR-certified staff, and secure access at Little Newtons Academy in Lake Mary, FL.",
+  alternates: { canonical: '/safety' },
+  openGraph: {
+    title: 'Safety & Trust - Licensed & Secure Childcare',
+    description:
+      "Your child's safety is our highest priority. DCF-licensed, secure access, and CPR-certified staff.",
+    url: '/safety',
+  },
 }
 
 const safetyFeatures = [
@@ -128,6 +138,7 @@ const communicationFeatures = [
 export default function SafetyPage() {
   return (
     <>
+      <JsonLd data={buildBreadcrumbs([{ name: 'Home', url: '/' }, { name: 'Safety & Trust', url: '/safety' }])} />
       {/* Hero */}
       <section className="py-20 bg-[var(--brand-cream)]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">

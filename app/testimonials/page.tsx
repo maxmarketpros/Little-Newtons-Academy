@@ -1,10 +1,20 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import CTABanner from '@/components/cta-banner'
+import JsonLd from '@/components/json-ld'
+import { buildBreadcrumbs } from '@/lib/seo'
 
-export const metadata = {
-  title: 'Parent Testimonials & Reviews | Little Newtons Academy Lake Mary',
+export const metadata: Metadata = {
+  title: 'Parent Testimonials & Reviews',
   description:
     'Read what parents are saying about Little Newtons Academy. Real reviews from real families in Lake Mary and Heathrow, FL.',
+  alternates: { canonical: '/testimonials' },
+  openGraph: {
+    title: 'Parent Testimonials & Reviews',
+    description:
+      'Real reviews from real families at Little Newtons Academy in Lake Mary and Heathrow, FL.',
+    url: '/testimonials',
+  },
 }
 
 const testimonials = [
@@ -73,6 +83,7 @@ function LargeStarRating() {
 export default function TestimonialsPage() {
   return (
     <>
+      <JsonLd data={buildBreadcrumbs([{ name: 'Home', url: '/' }, { name: 'Testimonials', url: '/testimonials' }])} />
       {/* Hero */}
       <section className="py-20 bg-[var(--brand-cream)]">
         <div className="max-w-3xl mx-auto px-6 sm:px-10 lg:px-16 text-center">

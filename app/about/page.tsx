@@ -1,11 +1,21 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import CTABanner from '@/components/cta-banner'
+import JsonLd from '@/components/json-ld'
+import { buildBreadcrumbs } from '@/lib/seo'
 
-export const metadata = {
-  title: 'About Us | Our Mission & Philosophy | Little Newtons Academy Lake Mary',
+export const metadata: Metadata = {
+  title: 'About Us - Our Mission & Philosophy',
   description:
     "Learn about Little Newtons Academy's philosophy of Curiosity, Discovery, and Growth. A premium early learning academy serving Lake Mary and Heathrow, FL.",
+  alternates: { canonical: '/about' },
+  openGraph: {
+    title: 'About Us - Our Mission & Philosophy',
+    description:
+      "Learn about Little Newtons Academy's philosophy of Curiosity, Discovery, and Growth.",
+    url: '/about',
+  },
 }
 
 const pillars = [
@@ -153,6 +163,7 @@ const credentials = [
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={buildBreadcrumbs([{ name: 'Home', url: '/' }, { name: 'About Us', url: '/about' }])} />
       {/* Hero */}
       <section className="py-20 bg-[var(--brand-cream)]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">

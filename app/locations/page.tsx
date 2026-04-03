@@ -1,11 +1,21 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import CTABanner from '@/components/cta-banner'
+import JsonLd from '@/components/json-ld'
+import { buildBreadcrumbs, SITE_URL, HEATHROW_CAMPUS, LAKE_MARY_CAMPUS } from '@/lib/seo'
 
-export const metadata = {
-  title: 'Our Locations | Heathrow & Lake Mary FL | Little Newtons Academy',
+export const metadata: Metadata = {
+  title: 'Our Locations - Heathrow & Lake Mary FL',
   description:
     'Visit Little Newtons Academy at our Heathrow (1032 AAA Drive) or Lake Mary (2720 W. Lake Mary Blvd) locations. Schedule a tour today!',
+  alternates: { canonical: '/locations' },
+  openGraph: {
+    title: 'Our Locations - Heathrow & Lake Mary FL',
+    description:
+      'Visit Little Newtons Academy at our Heathrow or Lake Mary locations. Schedule a tour today!',
+    url: '/locations',
+  },
 }
 
 const campusFeatures = [
@@ -75,8 +85,46 @@ const campusFeatures = [
 ]
 
 export default function LocationsPage() {
+  const childCareSchema = (campus: typeof HEATHROW_CAMPUS) => ({
+    '@context': 'https://schema.org',
+    '@type': 'ChildCare',
+    name: campus.name,
+    image: `${SITE_URL}/images/logo-landscape.png`,
+    url: `${SITE_URL}/locations`,
+    telephone: campus.phoneTel,
+    email: campus.email,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: campus.address,
+      addressLocality: campus.city,
+      addressRegion: campus.state,
+      postalCode: campus.zip,
+      addressCountry: 'US',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: campus.lat,
+      longitude: campus.lng,
+    },
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '07:00',
+      closes: '18:00',
+    },
+    priceRange: '$$',
+    areaServed: ['Lake Mary', 'Heathrow', 'Sanford', 'Seminole County'],
+    parentOrganization: {
+      '@type': 'Organization',
+      name: 'Little Newtons Academy',
+    },
+  })
+
   return (
     <>
+      <JsonLd data={buildBreadcrumbs([{ name: 'Home', url: '/' }, { name: 'Our Locations', url: '/locations' }])} />
+      <JsonLd data={childCareSchema(HEATHROW_CAMPUS)} />
+      <JsonLd data={childCareSchema(LAKE_MARY_CAMPUS)} />
       {/* Hero */}
       <section className="py-20 bg-[var(--brand-cream)]">
         <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16 text-center">

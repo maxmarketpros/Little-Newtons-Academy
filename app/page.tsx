@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Hero from '@/components/hero'
 import Philosophy from '@/components/philosophy'
 import Safety from '@/components/safety'
@@ -8,6 +9,11 @@ import DailySchedule from '@/components/daily-schedule'
 import KindergartenReadiness from '@/components/kindergarten-readiness'
 import Testimonials from '@/components/testimonials'
 import Contact from '@/components/contact'
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+  openGraph: { url: '/' },
+}
 
 export default function Home() {
   return (

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Contact from '@/components/contact'
 import {
   Accordion,
@@ -5,11 +6,20 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
+import JsonLd from '@/components/json-ld'
+import { buildBreadcrumbs } from '@/lib/seo'
 
-export const metadata = {
-  title: 'Schedule a Tour | Contact Us | Little Newtons Academy Lake Mary FL',
+export const metadata: Metadata = {
+  title: 'Schedule a Tour - Lake Mary & Heathrow FL',
   description:
     'Schedule a tour at Little Newtons Academy. Contact us about enrollment for Infant, Toddler, Preschool, and VPK programs in Lake Mary and Heathrow, FL.',
+  alternates: { canonical: '/schedule-a-tour' },
+  openGraph: {
+    title: 'Schedule a Tour - Lake Mary & Heathrow FL',
+    description:
+      'Schedule a tour at Little Newtons Academy. See our classrooms and meet our teachers.',
+    url: '/schedule-a-tour',
+  },
 }
 
 const faqs = [
@@ -107,8 +117,23 @@ const tourSteps = [
 ]
 
 export default function ContactPage() {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  }
+
   return (
     <>
+      <JsonLd data={buildBreadcrumbs([{ name: 'Home', url: '/' }, { name: 'Schedule a Tour', url: '/schedule-a-tour' }])} />
+      <JsonLd data={faqSchema} />
       {/* Hero */}
       <section className="py-16 bg-[var(--brand-cream)]">
         <div className="max-w-3xl mx-auto px-6 sm:px-10 lg:px-16 text-center">

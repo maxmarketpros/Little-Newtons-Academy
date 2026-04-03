@@ -1,11 +1,21 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import CTABanner from '@/components/cta-banner'
+import JsonLd from '@/components/json-ld'
+import { buildBreadcrumbs } from '@/lib/seo'
 
-export const metadata = {
-  title: 'Curriculum & Academic Excellence | Creative Curriculum & STEAM | Little Newtons Academy',
+export const metadata: Metadata = {
+  title: 'Curriculum & STEAM Learning',
   description:
-    "Our Creative Curriculum and STEAM-integrated approach prepares children for kindergarten success. Aligned with Florida VPK and School Readiness standards in Lake Mary, FL.",
+    'Our Creative Curriculum and STEAM-integrated approach prepares children for kindergarten success. Aligned with Florida VPK and School Readiness standards in Lake Mary, FL.',
+  alternates: { canonical: '/curriculum' },
+  openGraph: {
+    title: 'Curriculum & STEAM Learning',
+    description:
+      'Creative Curriculum and STEAM-integrated approach for kindergarten readiness in Lake Mary, FL.',
+    url: '/curriculum',
+  },
 }
 
 const curriculumPrinciples = [
@@ -95,6 +105,7 @@ const distinctions = [
 export default function CurriculumPage() {
   return (
     <>
+      <JsonLd data={buildBreadcrumbs([{ name: 'Home', url: '/' }, { name: 'Curriculum', url: '/curriculum' }])} />
       {/* Hero */}
       <section className="py-20 bg-[var(--brand-cream)]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">

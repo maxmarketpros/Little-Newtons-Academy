@@ -1,11 +1,21 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import CTABanner from '@/components/cta-banner'
+import JsonLd from '@/components/json-ld'
+import { buildBreadcrumbs } from '@/lib/seo'
 
-export const metadata = {
-  title: 'Programs | Infant, Toddler, Preschool & VPK | Little Newtons Academy Lake Mary',
+export const metadata: Metadata = {
+  title: 'Infant, Toddler, Preschool & VPK Programs',
   description:
     'Explore age-appropriate programs from Infant through VPK at Little Newtons Academy in Lake Mary, FL. Discover our 4-step early learning journey designed for every stage of development.',
+  alternates: { canonical: '/programs' },
+  openGraph: {
+    title: 'Infant, Toddler, Preschool & VPK Programs',
+    description:
+      'Explore age-appropriate programs from Infant through VPK at Little Newtons Academy in Lake Mary, FL.',
+    url: '/programs',
+  },
 }
 
 const programs = [
@@ -142,6 +152,7 @@ const outcomes = [
 export default function ProgramsPage() {
   return (
     <>
+      <JsonLd data={buildBreadcrumbs([{ name: 'Home', url: '/' }, { name: 'Programs', url: '/programs' }])} />
       {/* Hero */}
       <section className="py-20 bg-[var(--brand-cream)]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">

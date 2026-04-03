@@ -1,11 +1,21 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import CTABanner from '@/components/cta-banner'
+import JsonLd from '@/components/json-ld'
+import { buildBreadcrumbs } from '@/lib/seo'
 
-export const metadata = {
-  title: 'A Day at Little Newtons | Daily Schedule | Little Newtons Academy Lake Mary',
+export const metadata: Metadata = {
+  title: 'A Day at Little Newtons - Daily Schedule',
   description:
     'See what a typical day looks like at Little Newtons Academy in Lake Mary, FL. From morning breakfast to afternoon exploration, every moment is purposeful.',
+  alternates: { canonical: '/daily-life' },
+  openGraph: {
+    title: 'A Day at Little Newtons - Daily Schedule',
+    description:
+      'See what a typical day looks like at Little Newtons Academy. Every moment is purposeful.',
+    url: '/daily-life',
+  },
 }
 
 const timeline = [
@@ -136,6 +146,7 @@ const enrichment = [
 export default function DailyLifePage() {
   return (
     <>
+      <JsonLd data={buildBreadcrumbs([{ name: 'Home', url: '/' }, { name: 'A Day at Little Newtons', url: '/daily-life' }])} />
       {/* Hero */}
       <section className="py-20 bg-[var(--brand-cream)]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
