@@ -9,10 +9,29 @@ const inputClass =
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setSubmitted(true)
+    setSubmitting(true)
+    setError(false)
+
+    const formData = new FormData(e.currentTarget)
+
+    try {
+      const response = await fetch('/__forms.html', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+      })
+      if (!response.ok) throw new Error('Form submission failed')
+      setSubmitted(true)
+    } catch {
+      setError(true)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -145,19 +164,20 @@ export default function ContactPage() {
                     Fill out the form below and our team will get back to you promptly.
                   </p>
 
-                  <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                  <form name="contact" onSubmit={handleSubmit} className="flex flex-col gap-4">
+                    <input type="hidden" name="form-name" value="contact" />
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div className="flex flex-col gap-1.5">
                         <label htmlFor="name" className="text-sm font-semibold text-[var(--foreground)]">
                           Full Name <span className="text-[var(--brand-red)]">*</span>
                         </label>
-                        <input id="name" type="text" required placeholder="Your name" className={inputClass} />
+                        <input id="name" name="name" type="text" required placeholder="Your name" className={inputClass} />
                       </div>
                       <div className="flex flex-col gap-1.5">
                         <label htmlFor="phone" className="text-sm font-semibold text-[var(--foreground)]">
                           Phone Number
                         </label>
-                        <input id="phone" type="tel" placeholder="(407) 000-0000" className={inputClass} />
+                        <input id="phone" name="phone" type="tel" placeholder="(407) 000-0000" className={inputClass} />
                       </div>
                     </div>
 
@@ -165,14 +185,14 @@ export default function ContactPage() {
                       <label htmlFor="email" className="text-sm font-semibold text-[var(--foreground)]">
                         Email Address <span className="text-[var(--brand-red)]">*</span>
                       </label>
-                      <input id="email" type="email" required placeholder="you@example.com" className={inputClass} />
+                      <input id="email" name="email" type="email" required placeholder="you@example.com" className={inputClass} />
                     </div>
 
                     <div className="flex flex-col gap-1.5">
                       <label htmlFor="subject" className="text-sm font-semibold text-[var(--foreground)]">
                         Subject
                       </label>
-                      <select id="subject" className={inputClass}>
+                      <select id="subject" name="subject" className={inputClass}>
                         <option value="">Select a topic...</option>
                         <option value="general">General Inquiry</option>
                         <option value="enrollment">Enrollment Questions</option>
@@ -188,6 +208,7 @@ export default function ContactPage() {
                       </label>
                       <textarea
                         id="message"
+                        name="message"
                         rows={5}
                         required
                         placeholder="How can we help you?"
@@ -195,11 +216,18 @@ export default function ContactPage() {
                       />
                     </div>
 
+                    {error && (
+                      <p className="text-[var(--brand-red)] text-sm font-semibold text-center">
+                        Something went wrong. Please try again or call us directly.
+                      </p>
+                    )}
+
                     <button
                       type="submit"
-                      className="w-full bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold py-4 rounded-xl hover:opacity-90 transition-opacity text-base mt-2"
+                      disabled={submitting}
+                      className="w-full bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold py-4 rounded-xl hover:opacity-90 transition-opacity text-base mt-2 disabled:opacity-60"
                     >
-                      Send Message
+                      {submitting ? 'Submitting…' : 'Send Message'}
                     </button>
                   </form>
                 </>

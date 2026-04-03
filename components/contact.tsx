@@ -11,6 +11,8 @@ interface Child {
 export default function Contact() {
   const [children, setChildren] = useState<Child[]>([{ name: '', age: '' }])
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState(false)
 
   const addChild = () => {
     if (children.length < 4) {
@@ -28,9 +30,31 @@ export default function Contact() {
     setChildren(updated)
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setSubmitted(true)
+    setSubmitting(true)
+    setError(false)
+
+    const formData = new FormData(e.currentTarget)
+    // Flatten children into named fields for Netlify
+    children.forEach((child, i) => {
+      formData.set(`child-${i + 1}-name`, child.name)
+      formData.set(`child-${i + 1}-age`, child.age)
+    })
+
+    try {
+      const response = await fetch('/__forms.html', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+      })
+      if (!response.ok) throw new Error('Form submission failed')
+      setSubmitted(true)
+    } catch {
+      setError(true)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const ageOptions = [
@@ -93,19 +117,20 @@ export default function Contact() {
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                <form name="tour-request" onSubmit={handleSubmit} className="flex flex-col gap-4">
+                  <input type="hidden" name="form-name" value="tour-request" />
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="flex flex-col gap-1.5">
                       <label htmlFor="parent-name" className="text-sm font-semibold text-[var(--foreground)]">
                         Parent / Guardian Name <span className="text-[var(--brand-red)]">*</span>
                       </label>
-                      <input id="parent-name" type="text" required placeholder="Your full name" className={inputClass} />
+                      <input id="parent-name" name="parent-name" type="text" required placeholder="Your full name" className={inputClass} />
                     </div>
                     <div className="flex flex-col gap-1.5">
                       <label htmlFor="phone" className="text-sm font-semibold text-[var(--foreground)]">
                         Phone Number <span className="text-[var(--brand-red)]">*</span>
                       </label>
-                      <input id="phone" type="tel" required placeholder="(407) 000-0000" className={inputClass} />
+                      <input id="phone" name="phone" type="tel" required placeholder="(407) 000-0000" className={inputClass} />
                     </div>
                   </div>
 
@@ -113,14 +138,14 @@ export default function Contact() {
                     <label htmlFor="email" className="text-sm font-semibold text-[var(--foreground)]">
                       Email Address <span className="text-[var(--brand-red)]">*</span>
                     </label>
-                    <input id="email" type="email" required placeholder="you@example.com" className={inputClass} />
+                    <input id="email" name="email" type="email" required placeholder="you@example.com" className={inputClass} />
                   </div>
 
                   <div className="flex flex-col gap-1.5">
                     <label htmlFor="location" className="text-sm font-semibold text-[var(--foreground)]">
                       Preferred Location
                     </label>
-                    <select id="location" className={inputClass}>
+                    <select id="location" name="location" className={inputClass}>
                       <option value="">Select a location...</option>
                       <option value="heathrow">Heathrow — 1032 AAA Drive</option>
                       <option value="lake-mary">Lake Mary — 2720 W. Lake Mary Blvd</option>
@@ -192,17 +217,25 @@ export default function Contact() {
                     </label>
                     <textarea
                       id="message"
+                      name="message"
                       rows={3}
                       placeholder="Any questions or information you'd like to share..."
                       className={`${inputClass} resize-none`}
                     />
                   </div>
 
+                  {error && (
+                    <p className="text-[var(--brand-red)] text-sm font-semibold text-center">
+                      Something went wrong. Please try again or call us directly.
+                    </p>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold py-4 rounded-xl hover:opacity-90 transition-opacity text-base mt-2"
+                    disabled={submitting}
+                    className="w-full bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold py-4 rounded-xl hover:opacity-90 transition-opacity text-base mt-2 disabled:opacity-60"
                   >
-                    Schedule My Tour
+                    {submitting ? 'Submitting…' : 'Schedule My Tour'}
                   </button>
                 </form>
               </>
