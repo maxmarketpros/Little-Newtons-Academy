@@ -164,7 +164,7 @@ export default function SafetyPage() {
             </div>
             <div className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-xl">
               <Image
-                src="/images/client-facility-5.jpg"
+                src="/images/client-facility-7.jpg"
                 alt="Safe and secure facility at Little Newtons Academy"
                 fill
                 className="object-cover"

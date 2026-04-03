@@ -181,8 +181,8 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
               <Image
-                src="/images/playground-group.jpg"
-                alt="Children learning and playing together at Little Newtons Academy"
+                src="/images/client-playground-1.jpg"
+                alt="Children playing together at Little Newtons Academy playground"
                 fill
                 className="object-cover"
                 priority
@@ -198,8 +198,8 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative aspect-square lg:aspect-auto lg:h-[520px] rounded-3xl overflow-hidden shadow-lg">
               <Image
-                src="/images/music-group.jpg"
-                alt="Children engaged in group music activity at Little Newtons Academy"
+                src="/images/client-music-1.jpg"
+                alt="Children enjoying music and movement at Little Newtons Academy"
                 fill
                 className="object-cover"
               />

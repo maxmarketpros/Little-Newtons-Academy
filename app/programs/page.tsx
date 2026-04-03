@@ -90,6 +90,7 @@ const programs = [
     tagline: 'Fully prepared for kindergarten success',
     image: '/images/playground-confident.jpg',
     imageAlt: 'Confident child ready for kindergarten',
+    imagePosition: 'center 20%',
     color: '#e07c3a',
     bg: '#fef4ec',
   },
@@ -213,6 +214,7 @@ export default function ProgramsPage() {
                     alt={program.imageAlt}
                     fill
                     className="object-cover"
+                    style={program.imagePosition ? { objectPosition: program.imagePosition } : undefined}
                   />
                   <div
                     className="absolute top-4 left-4 text-xs font-bold px-4 py-1.5 rounded-full text-[var(--primary-foreground)]"
