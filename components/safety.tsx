@@ -1,6 +1,10 @@
+import Link from 'next/link'
+
 const safetyFeatures = [
   {
     title: 'Secure Access',
+    color: '#0879A1',
+    bg: '#e0f4fb',
     description: 'Locked doors and strict sign-in/sign-out procedures help keep our school secure at all times.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
@@ -11,6 +15,8 @@ const safetyFeatures = [
   },
   {
     title: 'Constant Monitoring',
+    color: '#3aabcc',
+    bg: '#eef9fc',
     description: '24-hour camera surveillance and continuous staff supervision provide an added layer of safety.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
@@ -22,6 +28,8 @@ const safetyFeatures = [
   },
   {
     title: 'Parent Communication',
+    color: '#7bc142',
+    bg: '#f4fbed',
     description:
       'The Procare app keeps families connected throughout the day with real-time updates and easy messaging.',
     icon: (
@@ -32,6 +40,8 @@ const safetyFeatures = [
   },
   {
     title: 'Emergency Preparedness',
+    color: '#e03a2e',
+    bg: '#fef0ef',
     description: 'Regular emergency drills help children become familiar with safety routines in a calm, supportive way.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
@@ -43,6 +53,8 @@ const safetyFeatures = [
   },
   {
     title: 'CPR & First Aid Certified',
+    color: '#e07c3a',
+    bg: '#fef4ec',
     description: 'All staff are fully trained and certified to respond quickly and confidently in any situation.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
@@ -52,6 +64,8 @@ const safetyFeatures = [
   },
   {
     title: 'Clean & Healthy Classrooms',
+    color: '#2d7a3a',
+    bg: '#edf7ef',
     description: 'We maintain sanitized classrooms daily and encourage healthy habits to support every child\'s wellness.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
@@ -61,6 +75,8 @@ const safetyFeatures = [
   },
   {
     title: 'Continuous Supervision',
+    color: '#0CA7D5',
+    bg: '#e6f7fc',
     description: 'Our team closely supervises children throughout the entire day — they are never out of sight.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
@@ -71,6 +87,8 @@ const safetyFeatures = [
   },
   {
     title: 'State-Licensed & Compliant',
+    color: '#0879A1',
+    bg: '#e0f4fb',
     description: 'Fully licensed by DCF, and compliant with VPK, School Readiness, and Early Learning Coalition standards.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
@@ -83,7 +101,7 @@ const safetyFeatures = [
 
 export default function Safety() {
   return (
-    <section id="safety" className="py-20 bg-[var(--brand-cream)]">
+    <section id="safety" className="py-20 cream-pattern-bg">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="text-center mb-14">
           <span className="inline-block text-[var(--brand-sky)] font-bold text-sm tracking-widest uppercase mb-4">
@@ -102,9 +120,13 @@ export default function Safety() {
           {safetyFeatures.map((feature) => (
             <div
               key={feature.title}
-              className="bg-[var(--background)] rounded-2xl p-6 flex flex-col gap-4 hover:shadow-md transition-shadow"
+              className="rounded-2xl p-6 flex flex-col gap-4 hover:shadow-md transition-shadow"
+              style={{ backgroundColor: feature.bg }}
             >
-              <div className="w-12 h-12 rounded-xl bg-[var(--secondary)] text-[var(--brand-green)] flex items-center justify-center flex-shrink-0">
+              <div
+                className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 text-[var(--primary-foreground)]"
+                style={{ backgroundColor: feature.color }}
+              >
                 {feature.icon}
               </div>
               <div>
@@ -116,7 +138,7 @@ export default function Safety() {
         </div>
 
         {/* Certification bar */}
-        <div className="mt-12 bg-[var(--brand-green)] rounded-2xl p-6 sm:p-8">
+        <div className="mt-12 bg-[var(--brand-blue-deep)] rounded-2xl p-6 sm:p-8">
           <div className="grid sm:grid-cols-3 gap-6 text-[var(--primary-foreground)]">
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
@@ -152,6 +174,15 @@ export default function Safety() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <Link
+            href="/schedule-a-tour"
+            className="bg-[var(--brand-blue-deep)] text-[var(--primary-foreground)] font-bold px-7 py-3.5 rounded-full hover:opacity-90 transition-opacity"
+          >
+            Schedule a Tour
+          </Link>
         </div>
       </div>
     </section>

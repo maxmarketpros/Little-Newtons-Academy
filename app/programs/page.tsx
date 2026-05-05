@@ -79,7 +79,7 @@ const programs = [
     tagline: 'Confidence in learning begins here',
     image: '/images/facility-classroom.jpg',
     imageAlt: 'Bright preschool classroom with learning centers',
-    color: 'var(--brand-green)',
+    color: '#2d7a3a',
     bg: '#edf7ef',
   },
   {
@@ -154,7 +154,7 @@ export default function ProgramsPage() {
     <>
       <JsonLd data={buildBreadcrumbs([{ name: 'Home', url: '/' }, { name: 'Programs', url: '/programs' }])} />
       {/* Hero */}
-      <section className="py-20 bg-[var(--brand-cream)]">
+      <section className="py-20 cream-pattern-bg">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -171,13 +171,13 @@ export default function ProgramsPage() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/schedule-a-tour"
-                  className="bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
+                  className="bg-[var(--brand-blue-deep)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
                 >
                   Schedule a Tour
                 </Link>
                 <a
                   href="#journey"
-                  className="border-2 border-[var(--brand-green)] text-[var(--brand-green)] font-bold px-8 py-3.5 rounded-full hover:bg-[var(--secondary)] transition-colors"
+                  className="border-2 border-[var(--brand-blue-deep)] text-[var(--brand-blue-deep)] font-bold px-8 py-3.5 rounded-full hover:bg-[var(--secondary)] transition-colors"
                 >
                   See Our Journey
                 </a>
@@ -273,7 +273,7 @@ export default function ProgramsPage() {
       </section>
 
       {/* The Result */}
-      <section className="py-20 bg-[var(--brand-cream)]">
+      <section className="py-20 cream-pattern-bg">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center mb-14">
             <span className="inline-block text-[var(--brand-sky)] font-bold text-sm tracking-widest uppercase mb-4">
@@ -290,7 +290,7 @@ export default function ProgramsPage() {
                 key={outcome.title}
                 className="text-center p-6 rounded-2xl border border-[var(--border)] bg-[var(--background)] hover:shadow-md transition-shadow"
               >
-                <div className="w-12 h-12 rounded-xl bg-[var(--secondary)] text-[var(--brand-green)] flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 rounded-xl bg-[var(--secondary)] text-[var(--brand-blue-deep)] flex items-center justify-center mx-auto mb-4">
                   {outcome.icon}
                 </div>
                 <h3 className="font-bold text-[var(--foreground)] mb-2">{outcome.title}</h3>

@@ -79,7 +79,7 @@ export default function Testimonials() {
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
               <div className="pt-4 border-t border-[var(--border)]">
-                <p className="font-bold text-[var(--brand-green)] text-sm">{testimonial.title}</p>
+                <p className="font-bold text-[var(--brand-blue-deep)] text-sm">{testimonial.title}</p>
                 <p className="text-[var(--muted-foreground)] text-xs mt-0.5">{testimonial.author}</p>
               </div>
             </div>
@@ -117,7 +117,7 @@ export default function Testimonials() {
         <p className="text-center mt-10 text-[var(--muted-foreground)]">
           Join the many families who trust Little Newtons Academy to provide a safe, engaging, and supportive start
           to their child&apos;s learning journey.{' '}
-          <a href="#contact" className="text-[var(--brand-green)] font-bold hover:underline">
+          <a href="#contact" className="text-[var(--brand-blue-deep)] font-bold hover:underline">
             Schedule a Tour Today
           </a>
         </p>

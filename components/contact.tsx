@@ -66,10 +66,10 @@ export default function Contact() {
   ]
 
   const inputClass =
-    'w-full px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)] text-sm focus:outline-none focus:ring-2 focus:ring-[var(--brand-green)] transition-shadow placeholder:text-[var(--muted-foreground)]'
+    'w-full px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)] text-sm focus:outline-none focus:ring-2 focus:ring-[var(--brand-blue-deep)] transition-shadow placeholder:text-[var(--muted-foreground)]'
 
   return (
-    <section id="contact" className="py-20 bg-[var(--brand-cream)]">
+    <section id="contact" className="py-20 cream-pattern-bg">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left: heading + form */}
@@ -88,7 +88,7 @@ export default function Contact() {
           <div className="bg-[var(--background)] rounded-3xl p-8 shadow-sm border border-[var(--border)]">
             {submitted ? (
               <div className="text-center py-12">
-                <div className="w-16 h-16 rounded-full bg-[var(--secondary)] text-[var(--brand-green)] flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 rounded-full bg-[var(--secondary)] text-[var(--brand-blue-deep)] flex items-center justify-center mx-auto mb-6">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-8 h-8">
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
@@ -163,7 +163,7 @@ export default function Contact() {
                         <button
                           type="button"
                           onClick={addChild}
-                          className="text-xs font-bold text-[var(--brand-green)] hover:underline flex items-center gap-1"
+                          className="text-xs font-bold text-[var(--brand-blue-deep)] hover:underline flex items-center gap-1"
                         >
                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-3.5 h-3.5">
                             <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
@@ -233,7 +233,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold py-4 rounded-xl hover:opacity-90 transition-opacity text-base mt-2 disabled:opacity-60"
+                    className="w-full bg-[var(--brand-blue-deep)] text-[var(--primary-foreground)] font-bold py-4 rounded-xl hover:opacity-90 transition-opacity text-base mt-2 disabled:opacity-60"
                   >
                     {submitting ? 'Submitting…' : 'Schedule My Tour'}
                   </button>
@@ -249,16 +249,16 @@ export default function Contact() {
             <div className="flex flex-col gap-6 mb-10">
               <div className="p-6 bg-[var(--background)] rounded-2xl border border-[var(--border)]">
                 <h3 className="font-bold text-[var(--foreground)] mb-3 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[var(--brand-green)]" />
+                  <span className="w-2 h-2 rounded-full bg-[var(--brand-blue-deep)]" />
                   Heathrow Location
                 </h3>
                 <address className="not-italic text-[var(--muted-foreground)] text-sm leading-relaxed">
                   1032 AAA Drive<br />
                   Lake Mary, FL 32746<br />
-                  <a href="tel:4077324413" className="text-[var(--brand-green)] font-semibold hover:underline mt-1 block">
+                  <a href="tel:4077324413" className="text-[var(--brand-blue-deep)] font-semibold hover:underline mt-1 block">
                     (407) 732-4413
                   </a>
-                  <a href="mailto:heathrow@littlenewtonsacademy.com" className="text-[var(--brand-green)] font-semibold hover:underline block">
+                  <a href="mailto:heathrow@littlenewtonsacademy.com" className="text-[var(--brand-blue-deep)] font-semibold hover:underline block">
                     heathrow@littlenewtonsacademy.com
                   </a>
                   <span className="text-xs mt-1 block">DCF License # C18SE0335</span>
@@ -272,10 +272,10 @@ export default function Contact() {
                 <address className="not-italic text-[var(--muted-foreground)] text-sm leading-relaxed">
                   2720 W. Lake Mary Blvd<br />
                   Lake Mary, FL 32746<br />
-                  <a href="tel:4073231221" className="text-[var(--brand-green)] font-semibold hover:underline mt-1 block">
+                  <a href="tel:4073231221" className="text-[var(--brand-blue-deep)] font-semibold hover:underline mt-1 block">
                     (407) 323-1221
                   </a>
-                  <a href="mailto:lakemary@littlenewtonsacademy.com" className="text-[var(--brand-green)] font-semibold hover:underline block">
+                  <a href="mailto:lakemary@littlenewtonsacademy.com" className="text-[var(--brand-blue-deep)] font-semibold hover:underline block">
                     lakemary@littlenewtonsacademy.com
                   </a>
                   <span className="text-xs mt-1 block">DCF License # C18SE031</span>

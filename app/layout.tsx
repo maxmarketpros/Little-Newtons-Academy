@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
-import { Nunito, Lora } from 'next/font/google'
+import { Nunito, Fraunces, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import JsonLd from '@/components/json-ld'
+import ScrollToTop from '@/components/scroll-to-top'
 import { SITE_URL, SITE_NAME } from '@/lib/seo'
 import './globals.css'
 
@@ -13,9 +14,15 @@ const nunito = Nunito({
   display: 'swap',
 })
 
-const lora = Lora({
+const fraunces = Fraunces({
   subsets: ['latin'],
   variable: '--font-serif',
+  display: 'swap',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
   display: 'swap',
 })
 
@@ -79,7 +86,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport = {
-  themeColor: '#2d7a3a',
+  themeColor: '#0879A1',
   width: 'device-width',
   initialScale: 1,
 }
@@ -90,7 +97,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${nunito.variable} ${lora.variable}`}>
+    <html lang="en" className={`${nunito.variable} ${fraunces.variable} ${inter.variable}`}>
       <body className="font-sans antialiased">
         <JsonLd
           data={{
@@ -118,6 +125,7 @@ export default function RootLayout({
             description: 'Curiosity. Discovery. Growth.',
           }}
         />
+        <ScrollToTop />
         <Navbar />
         <main>{children}</main>
         <Footer />

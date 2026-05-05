@@ -49,7 +49,7 @@ const steps = [
     tagline: 'Confidence in learning begins here',
     image: '/images/facility-classroom.jpg',
     imageAlt: 'Little Newtons bright classroom with learning centers',
-    color: 'var(--brand-green)',
+    color: '#2d7a3a',
     bg: '#edf7ef',
   },
   {
@@ -73,7 +73,7 @@ const steps = [
 
 export default function Programs() {
   return (
-    <section id="programs" className="py-20 bg-[var(--brand-cream)]">
+    <section id="programs" className="py-20 cream-pattern-bg">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="text-center mb-16">
           <span className="inline-block text-[var(--brand-sky)] font-bold text-sm tracking-widest uppercase mb-4">
@@ -163,7 +163,7 @@ export default function Programs() {
         </div>
 
         {/* Result section */}
-        <div className="mt-14 bg-[var(--brand-green)] rounded-3xl p-8 sm:p-10 text-[var(--primary-foreground)]">
+        <div className="mt-14 bg-[var(--brand-blue-deep)] rounded-3xl p-8 sm:p-10 text-[var(--primary-foreground)]">
           <div className="grid sm:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="font-serif text-2xl font-bold mb-4">
@@ -192,7 +192,7 @@ export default function Programs() {
               </p>
               <a
                 href="#contact"
-                className="self-start bg-[var(--background)] text-[var(--brand-green)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
+                className="self-start bg-[var(--background)] text-[var(--brand-blue-deep)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
               >
                 Begin Your Child&apos;s Journey
               </a>

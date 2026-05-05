@@ -43,7 +43,7 @@ export default function Footer() {
                 href="https://www.facebook.com/people/Little-Newtons-Academy-Heathrow/61574696905979/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-[var(--brand-green)] flex items-center justify-center transition-colors"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-[var(--brand-blue-deep)] flex items-center justify-center transition-colors"
                 aria-label="Facebook"
               >
                 <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
@@ -54,7 +54,7 @@ export default function Footer() {
                 href="https://www.instagram.com/littlenewtons_heathrow/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-[var(--brand-green)] flex items-center justify-center transition-colors"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-[var(--brand-blue-deep)] flex items-center justify-center transition-colors"
                 aria-label="Instagram"
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">

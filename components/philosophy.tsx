@@ -68,7 +68,7 @@ export default function Philosophy() {
             <div className="flex flex-col gap-8">
               {pillars.map((pillar) => (
                 <div key={pillar.title} className="flex gap-5">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-[var(--secondary)] text-[var(--brand-green)] flex items-center justify-center">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-[var(--secondary)] text-[var(--brand-blue-deep)] flex items-center justify-center">
                     {pillar.icon}
                   </div>
                   <div>
@@ -79,7 +79,7 @@ export default function Philosophy() {
               ))}
             </div>
 
-            <div className="mt-10 p-6 bg-[var(--secondary)] rounded-2xl border-l-4 border-[var(--brand-green)]">
+            <div className="mt-10 p-6 bg-[var(--secondary)] rounded-2xl border-l-4 border-[var(--brand-blue-deep)]">
               <p className="text-[var(--foreground)] font-semibold italic leading-relaxed">
                 &quot;At Little Newtons, we don&apos;t just teach — we inspire. We create a space where children feel
                 confident to explore, excited to learn, and ready to grow.&quot;

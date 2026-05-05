@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 
 const inputClass =
-  'w-full px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)] text-sm focus:outline-none focus:ring-2 focus:ring-[var(--brand-green)] transition-shadow placeholder:text-[var(--muted-foreground)]'
+  'w-full px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)] text-sm focus:outline-none focus:ring-2 focus:ring-[var(--brand-blue-deep)] transition-shadow placeholder:text-[var(--muted-foreground)]'
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
@@ -37,7 +37,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-16 bg-[var(--brand-cream)]">
+      <section className="py-16 cream-pattern-bg">
         <div className="max-w-3xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
           <span className="inline-block text-[var(--brand-sky)] font-bold text-sm tracking-widest uppercase mb-4">
             Contact Us
@@ -65,23 +65,23 @@ export default function ContactPage() {
                 {/* Heathrow */}
                 <div className="p-6 bg-[var(--background)] rounded-2xl border border-[var(--border)]">
                   <h3 className="font-bold text-[var(--foreground)] mb-4 flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[var(--brand-green)]" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[var(--brand-blue-deep)]" />
                     Heathrow Campus
                   </h3>
                   <div className="flex flex-col gap-3">
                     <div className="flex items-start gap-3 text-[var(--muted-foreground)] text-sm">
-                      <MapPin size={16} className="text-[var(--brand-green)] flex-shrink-0 mt-0.5" />
+                      <MapPin size={16} className="text-[var(--brand-blue-deep)] flex-shrink-0 mt-0.5" />
                       <span>1032 AAA Drive, Lake Mary, FL 32746</span>
                     </div>
                     <div className="flex items-center gap-3 text-sm">
-                      <Phone size={16} className="text-[var(--brand-green)] flex-shrink-0" />
-                      <a href="tel:4077324413" className="text-[var(--brand-green)] font-semibold hover:underline">
+                      <Phone size={16} className="text-[var(--brand-blue-deep)] flex-shrink-0" />
+                      <a href="tel:4077324413" className="text-[var(--brand-blue-deep)] font-semibold hover:underline">
                         (407) 732-4413
                       </a>
                     </div>
                     <div className="flex items-center gap-3 text-sm">
-                      <Mail size={16} className="text-[var(--brand-green)] flex-shrink-0" />
-                      <a href="mailto:heathrow@littlenewtonsacademy.com" className="text-[var(--brand-green)] font-semibold hover:underline">
+                      <Mail size={16} className="text-[var(--brand-blue-deep)] flex-shrink-0" />
+                      <a href="mailto:heathrow@littlenewtonsacademy.com" className="text-[var(--brand-blue-deep)] font-semibold hover:underline">
                         heathrow@littlenewtonsacademy.com
                       </a>
                     </div>
@@ -96,18 +96,18 @@ export default function ContactPage() {
                   </h3>
                   <div className="flex flex-col gap-3">
                     <div className="flex items-start gap-3 text-[var(--muted-foreground)] text-sm">
-                      <MapPin size={16} className="text-[var(--brand-green)] flex-shrink-0 mt-0.5" />
+                      <MapPin size={16} className="text-[var(--brand-blue-deep)] flex-shrink-0 mt-0.5" />
                       <span>2720 W. Lake Mary Blvd, Lake Mary, FL 32746</span>
                     </div>
                     <div className="flex items-center gap-3 text-sm">
-                      <Phone size={16} className="text-[var(--brand-green)] flex-shrink-0" />
-                      <a href="tel:4073231221" className="text-[var(--brand-green)] font-semibold hover:underline">
+                      <Phone size={16} className="text-[var(--brand-blue-deep)] flex-shrink-0" />
+                      <a href="tel:4073231221" className="text-[var(--brand-blue-deep)] font-semibold hover:underline">
                         (407) 323-1221
                       </a>
                     </div>
                     <div className="flex items-center gap-3 text-sm">
-                      <Mail size={16} className="text-[var(--brand-green)] flex-shrink-0" />
-                      <a href="mailto:lakemary@littlenewtonsacademy.com" className="text-[var(--brand-green)] font-semibold hover:underline">
+                      <Mail size={16} className="text-[var(--brand-blue-deep)] flex-shrink-0" />
+                      <a href="mailto:lakemary@littlenewtonsacademy.com" className="text-[var(--brand-blue-deep)] font-semibold hover:underline">
                         lakemary@littlenewtonsacademy.com
                       </a>
                     </div>
@@ -117,7 +117,7 @@ export default function ContactPage() {
 
               {/* Hours */}
               <div className="flex items-start gap-3 mb-8 p-4 bg-[var(--secondary)] rounded-xl">
-                <Clock size={18} className="text-[var(--brand-green)] flex-shrink-0 mt-0.5" />
+                <Clock size={18} className="text-[var(--brand-blue-deep)] flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-bold text-[var(--foreground)] text-sm mb-1">Hours of Operation</p>
                   <p className="text-[var(--muted-foreground)] text-sm">Monday – Friday. Contact us for specific hours at each campus.</p>
@@ -132,7 +132,7 @@ export default function ContactPage() {
                 </p>
                 <Link
                   href="/schedule-a-tour"
-                  className="inline-block bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold text-sm px-6 py-3 rounded-full hover:opacity-90 transition-opacity"
+                  className="inline-block bg-[var(--brand-blue-deep)] text-[var(--primary-foreground)] font-bold text-sm px-6 py-3 rounded-full hover:opacity-90 transition-opacity"
                 >
                   Schedule a Tour
                 </Link>
@@ -143,7 +143,7 @@ export default function ContactPage() {
             <div className="bg-[var(--background)] rounded-3xl p-8 shadow-sm border border-[var(--border)]">
               {submitted ? (
                 <div className="text-center py-12">
-                  <div className="w-16 h-16 rounded-full bg-[var(--secondary)] text-[var(--brand-green)] flex items-center justify-center mx-auto mb-6">
+                  <div className="w-16 h-16 rounded-full bg-[var(--secondary)] text-[var(--brand-blue-deep)] flex items-center justify-center mx-auto mb-6">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-8 h-8">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
@@ -225,7 +225,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="w-full bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold py-4 rounded-xl hover:opacity-90 transition-opacity text-base mt-2 disabled:opacity-60"
+                      className="w-full bg-[var(--brand-blue-deep)] text-[var(--primary-foreground)] font-bold py-4 rounded-xl hover:opacity-90 transition-opacity text-base mt-2 disabled:opacity-60"
                     >
                       {submitting ? 'Submitting…' : 'Send Message'}
                     </button>

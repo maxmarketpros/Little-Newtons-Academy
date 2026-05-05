@@ -5,11 +5,12 @@
 
 :root {
   /* Little Newtons Academy Brand Colors */
-  --brand-green: #2d7a3a;
+  --brand-blue: #0CA7D5;
+  --brand-blue-deep: #0879A1;
   --brand-sky: #3aabcc;
   --brand-lime: #7bc142;
   --brand-red: #e03a2e;
-  --brand-cream: #f7f4ef;
+  --brand-cream: #fdfcf9; /* near-white with hint of warmth */
 
   --background: #ffffff;
   --foreground: #1a2e1c;
@@ -17,9 +18,9 @@
   --card-foreground: #1a2e1c;
   --popover: #ffffff;
   --popover-foreground: #1a2e1c;
-  --primary: #2d7a3a;
+  --primary: #0879A1;
   --primary-foreground: #ffffff;
-  --secondary: #f0f8f1;
+  --secondary: #E0F4FB;
   --secondary-foreground: #1a2e1c;
   --muted: #f7f4ef;
   --muted-foreground: #5a6b5c;
@@ -29,21 +30,21 @@
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: #dde8de;
   --input: #dde8de;
-  --ring: #2d7a3a;
+  --ring: #0879A1;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --radius: 0.75rem;
-  --sidebar: #f0f8f1;
+  --sidebar: #E0F4FB;
   --sidebar-foreground: #1a2e1c;
-  --sidebar-primary: #2d7a3a;
+  --sidebar-primary: #0879A1;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f0f8f1;
+  --sidebar-accent: #E0F4FB;
   --sidebar-accent-foreground: #1a2e1c;
   --sidebar-border: #dde8de;
-  --sidebar-ring: #2d7a3a;
+  --sidebar-ring: #0879A1;
 }
 
 .dark {
@@ -83,7 +84,8 @@
 
 @theme inline {
   --font-sans: var(--font-sans, 'Nunito', sans-serif);
-  --font-serif: var(--font-serif, 'Lora', serif);
+  --font-serif: var(--font-serif, 'Fraunces', serif);
+  --font-inter: var(--font-inter, 'Inter', sans-serif);
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -99,7 +101,8 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  --color-brand-green: var(--brand-green);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-blue-deep: var(--brand-blue-deep);
   --color-brand-sky: var(--brand-sky);
   --color-brand-lime: var(--brand-lime);
   --color-brand-red: var(--brand-red);
@@ -137,5 +140,51 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .font-serif.font-bold {
+    font-weight: 600;
+  }
+
+  .cream-pattern-bg {
+    background-color: var(--brand-cream);
+    background-image:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='700' height='700' viewBox='0 0 700 700'><g fill-opacity='0.07'><path d='M0 -55 Q35 -10 0 55 Q-35 -10 0 -55 Z' fill='%232d7a3a' transform='translate(130 130) rotate(-25)'/><path d='M0 -55 Q35 -10 0 55 Q-35 -10 0 -55 Z' fill='%233aabcc' transform='translate(520 100) rotate(35)'/><path d='M0 -50 Q30 -8 0 50 Q-30 -8 0 -50 Z' fill='%237bc142' transform='translate(340 280) rotate(65)'/><path d='M0 -55 Q35 -10 0 55 Q-35 -10 0 -55 Z' fill='%230CA7D5' transform='translate(160 460) rotate(-50)'/><path d='M0 -50 Q30 -8 0 50 Q-30 -8 0 -50 Z' fill='%232d7a3a' transform='translate(530 540) rotate(20)'/><path d='M0 -45 Q28 -8 0 45 Q-28 -8 0 -45 Z' fill='%23f4a23a' transform='translate(640 350) rotate(80)'/><path d='M0 -42 Q25 -7 0 42 Q-25 -7 0 -42 Z' fill='%23e03a2e' transform='translate(70 320) rotate(-10)'/><path d='M0 -45 Q28 -8 0 45 Q-28 -8 0 -45 Z' fill='%237bc142' transform='translate(380 620) rotate(-30)'/></g></svg>"),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='500' height='500' viewBox='0 0 500 500'><g fill-opacity='0.11'><circle cx='280' cy='80' r='6' fill='%237bc142'/><circle cx='80' cy='220' r='5' fill='%230CA7D5'/><circle cx='450' cy='270' r='6' fill='%23f4a23a'/><circle cx='220' cy='430' r='7' fill='%233aabcc'/><circle cx='380' cy='460' r='5' fill='%23e03a2e'/><circle cx='150' cy='90' r='4' fill='%232d7a3a'/></g></svg>");
+    background-size: 700px 700px, 500px 500px;
+    background-repeat: repeat, repeat;
+    background-position: 0 0, 0 0;
+    animation: creamPatternDrift 90s linear infinite;
+    will-change: background-position;
+  }
+
+  @keyframes creamPatternDrift {
+    0%   { background-position: 0 0, 0 0; }
+    100% { background-position: 700px -700px, -500px 500px; }
+  }
+
+  .cta-pulse {
+    animation: ctaPulse 2.4s ease-in-out infinite;
+    will-change: transform, box-shadow;
+  }
+
+  @keyframes ctaPulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 10px 22px -4px rgba(8, 121, 161, 0.45), 0 0 0 0 rgba(12, 167, 213, 0.45);
+    }
+    50% {
+      transform: scale(1.025);
+      box-shadow: 0 14px 30px -4px rgba(8, 121, 161, 0.55), 0 0 0 8px rgba(12, 167, 213, 0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cream-pattern-bg,
+    .cta-pulse {
+      animation: none;
+    }
   }
 }

@@ -135,7 +135,7 @@ export default function ContactPage() {
       <JsonLd data={buildBreadcrumbs([{ name: 'Home', url: '/' }, { name: 'Schedule a Tour', url: '/schedule-a-tour' }])} />
       <JsonLd data={faqSchema} />
       {/* Hero */}
-      <section className="py-16 bg-[var(--brand-cream)]">
+      <section className="py-16 cream-pattern-bg">
         <div className="max-w-3xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
           <span className="inline-block text-[var(--brand-sky)] font-bold text-sm tracking-widest uppercase mb-4">
             Get in Touch
@@ -174,10 +174,10 @@ export default function ContactPage() {
                 key={step.number}
                 className="text-center p-6 rounded-2xl border border-[var(--border)] bg-[var(--background)] hover:shadow-md transition-shadow"
               >
-                <div className="w-10 h-10 rounded-full bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold text-sm flex items-center justify-center mx-auto mb-4">
+                <div className="w-10 h-10 rounded-full bg-[var(--brand-blue-deep)] text-[var(--primary-foreground)] font-bold text-sm flex items-center justify-center mx-auto mb-4">
                   {step.number}
                 </div>
-                <div className="w-12 h-12 rounded-xl bg-[var(--secondary)] text-[var(--brand-green)] flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 rounded-xl bg-[var(--secondary)] text-[var(--brand-blue-deep)] flex items-center justify-center mx-auto mb-4">
                   {step.icon}
                 </div>
                 <h3 className="font-bold text-[var(--foreground)] mb-2">{step.title}</h3>
@@ -189,7 +189,7 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-[var(--brand-cream)]">
+      <section className="py-20 cream-pattern-bg">
         <div className="max-w-3xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center mb-14">
             <span className="inline-block text-[var(--brand-sky)] font-bold text-sm tracking-widest uppercase mb-4">

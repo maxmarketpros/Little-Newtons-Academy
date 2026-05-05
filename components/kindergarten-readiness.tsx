@@ -32,7 +32,7 @@ const skills = [
         <path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
-    color: 'var(--brand-green)',
+    color: '#2d7a3a',
     bg: '#edf7ef',
   },
   {
@@ -51,7 +51,7 @@ const skills = [
 
 export default function KindergartenReadiness() {
   return (
-    <section className="py-20 bg-[var(--brand-cream)]">
+    <section className="py-20 cream-pattern-bg">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left content */}
@@ -74,7 +74,7 @@ export default function KindergartenReadiness() {
             </p>
 
             {/* Outcome checklist */}
-            <div className="bg-[var(--brand-green)] rounded-2xl p-6 text-[var(--primary-foreground)]">
+            <div className="bg-[var(--brand-blue-deep)] rounded-2xl p-6 text-[var(--primary-foreground)]">
               <p className="font-bold mb-4">Children leave Little Newtons Academy with:</p>
               <div className="grid grid-cols-2 gap-2.5">
                 {[
@@ -98,7 +98,7 @@ export default function KindergartenReadiness() {
               {['Florida VPK Standards', 'School Readiness Standards', 'Early Learning Coalition'].map((cert) => (
                 <span
                   key={cert}
-                  className="text-xs font-semibold px-4 py-2 rounded-full border-2 border-[var(--brand-green)] text-[var(--brand-green)]"
+                  className="text-xs font-semibold px-4 py-2 rounded-full border-2 border-[var(--brand-blue-deep)] text-[var(--brand-blue-deep)]"
                 >
                   {cert}
                 </span>

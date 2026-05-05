@@ -165,7 +165,7 @@ export default function AboutPage() {
     <>
       <JsonLd data={buildBreadcrumbs([{ name: 'Home', url: '/' }, { name: 'About Us', url: '/about' }])} />
       {/* Hero */}
-      <section className="py-20 bg-[var(--brand-cream)]">
+      <section className="py-20 cream-pattern-bg">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -185,7 +185,7 @@ export default function AboutPage() {
               </p>
               <Link
                 href="/schedule-a-tour"
-                className="inline-block bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
+                className="inline-block bg-[var(--brand-blue-deep)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
               >
                 Schedule a Tour
               </Link>
@@ -226,7 +226,7 @@ export default function AboutPage() {
               <div className="flex flex-col gap-8">
                 {pillars.map((pillar) => (
                   <div key={pillar.title} className="flex gap-5">
-                    <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-[var(--secondary)] text-[var(--brand-green)] flex items-center justify-center">
+                    <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-[var(--secondary)] text-[var(--brand-blue-deep)] flex items-center justify-center">
                       {pillar.icon}
                     </div>
                     <div>
@@ -237,7 +237,7 @@ export default function AboutPage() {
                 ))}
               </div>
 
-              <div className="mt-10 p-6 bg-[var(--secondary)] rounded-2xl border-l-4 border-[var(--brand-green)]">
+              <div className="mt-10 p-6 bg-[var(--secondary)] rounded-2xl border-l-4 border-[var(--brand-blue-deep)]">
                 <p className="text-[var(--foreground)] font-semibold italic leading-relaxed">
                   &quot;At Little Newtons, we don&apos;t just teach — we inspire. We create a space where children feel
                   confident to explore, excited to learn, and ready to grow.&quot;
@@ -249,7 +249,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Promise */}
-      <section className="py-20 bg-[var(--brand-cream)]">
+      <section className="py-20 cream-pattern-bg">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center mb-14">
             <span className="inline-block text-[var(--brand-sky)] font-bold text-sm tracking-widest uppercase mb-4">
@@ -270,7 +270,7 @@ export default function AboutPage() {
                 key={promise.title}
                 className="flex gap-4 p-5 rounded-2xl border border-[var(--border)] bg-[var(--background)] hover:shadow-md transition-shadow"
               >
-                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[var(--secondary)] text-[var(--brand-green)] flex items-center justify-center">
+                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[var(--secondary)] text-[var(--brand-blue-deep)] flex items-center justify-center">
                   {promise.icon}
                 </div>
                 <div>
@@ -301,7 +301,7 @@ export default function AboutPage() {
                 key={cred.title}
                 className="text-center p-6 rounded-2xl border border-[var(--border)] bg-[var(--background)] hover:shadow-md transition-shadow"
               >
-                <div className="w-14 h-14 rounded-xl bg-[var(--secondary)] text-[var(--brand-green)] flex items-center justify-center mx-auto mb-4">
+                <div className="w-14 h-14 rounded-xl bg-[var(--secondary)] text-[var(--brand-blue-deep)] flex items-center justify-center mx-auto mb-4">
                   {cred.icon}
                 </div>
                 <h3 className="font-bold text-[var(--foreground)] mb-2">{cred.title}</h3>
@@ -313,7 +313,7 @@ export default function AboutPage() {
       </section>
 
       {/* Photo Gallery */}
-      <section className="py-20 bg-[var(--brand-cream)]">
+      <section className="py-20 cream-pattern-bg">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-3 gap-4">
             {[

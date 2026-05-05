@@ -85,7 +85,7 @@ export default function TestimonialsPage() {
     <>
       <JsonLd data={buildBreadcrumbs([{ name: 'Home', url: '/' }, { name: 'Testimonials', url: '/testimonials' }])} />
       {/* Hero */}
-      <section className="py-20 bg-[var(--brand-cream)]">
+      <section className="py-20 cream-pattern-bg">
         <div className="max-w-3xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
           <span className="inline-block text-[var(--brand-sky)] font-bold text-sm tracking-widest uppercase mb-4">
             Parent Testimonials
@@ -118,7 +118,7 @@ export default function TestimonialsPage() {
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
                 <div className="pt-4 border-t border-[var(--border)]">
-                  <p className="font-bold text-[var(--brand-green)] text-sm">{testimonial.title}</p>
+                  <p className="font-bold text-[var(--brand-blue-deep)] text-sm">{testimonial.title}</p>
                   <p className="text-[var(--muted-foreground)] text-xs mt-0.5">{testimonial.author}</p>
                 </div>
               </div>
@@ -128,9 +128,9 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Featured Testimonial */}
-      <section className="py-20 bg-[var(--brand-cream)]">
+      <section className="py-20 cream-pattern-bg">
         <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="bg-[var(--brand-green)] rounded-3xl p-8 sm:p-12 text-[var(--primary-foreground)] text-center relative overflow-hidden">
+          <div className="bg-[var(--brand-blue-deep)] rounded-3xl p-8 sm:p-12 text-[var(--primary-foreground)] text-center relative overflow-hidden">
             {/* Decorative quote marks */}
             <div className="absolute top-4 left-6 text-white/10 text-[120px] font-serif leading-none select-none">&ldquo;</div>
             <div className="relative z-10">

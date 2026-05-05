@@ -2,18 +2,18 @@ import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <section className="relative bg-[var(--brand-cream)] overflow-hidden">
+    <section className="relative cream-pattern-bg overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 lg:min-h-[calc(100vh-80px)]">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 lg:min-h-[calc(100vh-176px)]">
           {/* Content */}
           <div className="flex flex-col justify-center px-6 sm:px-10 lg:px-16 pt-10 sm:pt-14 lg:py-24 pb-8 lg:pb-24">
-            <span className="inline-block text-[var(--brand-green)] font-bold text-xs lg:text-sm tracking-widest uppercase mb-3 lg:mb-4">
+            <span className="inline-block text-[var(--brand-blue)] font-bold text-xs lg:text-sm tracking-widest uppercase mb-3 lg:mb-4">
               Little Newtons Academy
             </span>
             <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[var(--foreground)] leading-tight text-balance mb-4 lg:mb-6">
               Where Curious Minds{' '}
-              <span className="whitespace-nowrap">Grow <span className="text-[var(--brand-green)]">&</span></span>{' '}
-              Futures Take Shape
+              <span className="whitespace-nowrap">Grow <span className="text-[var(--brand-blue)]">&</span></span>{' '}
+              <em>Futures</em> Take Shape
             </h1>
             <p className="text-[var(--muted-foreground)] text-base lg:text-lg leading-relaxed mb-3 lg:mb-4 lg:max-w-xl">
               You&apos;re not just looking for childcare. You&apos;re looking for a place where your child will be{' '}
@@ -38,13 +38,13 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-3 lg:gap-4">
               <a
                 href="#contact"
-                className="bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold px-6 py-3.5 lg:px-8 lg:py-4 rounded-full text-center hover:opacity-90 transition-opacity text-sm lg:text-base"
+                className="bg-[var(--brand-blue-deep)] text-[var(--primary-foreground)] font-bold px-6 py-3.5 lg:px-8 lg:py-4 rounded-full text-center hover:opacity-90 transition-opacity text-sm lg:text-base"
               >
                 Schedule a Tour Today
               </a>
               <a
                 href="#programs"
-                className="border-2 border-[var(--brand-green)] text-[var(--brand-green)] font-bold px-6 py-3.5 lg:px-8 lg:py-4 rounded-full text-center hover:bg-[var(--secondary)] transition-colors text-sm lg:text-base"
+                className="border-2 border-[var(--brand-blue-deep)] text-[var(--brand-blue-deep)] font-bold px-6 py-3.5 lg:px-8 lg:py-4 rounded-full text-center hover:bg-[var(--secondary)] transition-colors text-sm lg:text-base"
               >
                 See Our Programs
               </a>
@@ -54,7 +54,7 @@ export default function Hero() {
             <div className="mt-8 lg:mt-12 flex flex-wrap items-center justify-between sm:justify-start sm:gap-6">
               {['DCF Licensed', 'VPK Certified', 'USDA Meals'].map((badge) => (
                 <div key={badge} className="flex items-center gap-1 lg:gap-2">
-                  <div className="w-5 h-5 lg:w-8 lg:h-8 rounded-full bg-[var(--brand-green)] flex items-center justify-center flex-shrink-0">
+                  <div className="w-5 h-5 lg:w-8 lg:h-8 rounded-full bg-[var(--brand-blue-deep)] flex items-center justify-center flex-shrink-0">
                     <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" className="w-2.5 h-2.5 lg:w-4 lg:h-4">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>

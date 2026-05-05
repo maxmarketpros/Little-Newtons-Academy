@@ -12,7 +12,7 @@ export default function ImageShowcase() {
           className="object-cover object-center"
         />
         {/* Darker overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--brand-green)]/70 via-[var(--brand-green)]/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--brand-blue-deep)]/70 via-[var(--brand-blue-deep)]/40 to-transparent" />
 
         {/* Content pinned to the left */}
         <div className="absolute inset-0 flex items-center z-10">
@@ -31,7 +31,7 @@ export default function ImageShowcase() {
             </p>
             <a
               href="#programs"
-              className="inline-flex items-center gap-2 bg-white text-[var(--brand-green)] font-bold text-sm px-6 py-3 rounded-full hover:bg-white/90 transition-colors"
+              className="inline-flex items-center gap-2 bg-white text-[var(--brand-blue-deep)] font-bold text-sm px-6 py-3 rounded-full hover:bg-white/90 transition-colors"
             >
               Explore Our Programs
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4">

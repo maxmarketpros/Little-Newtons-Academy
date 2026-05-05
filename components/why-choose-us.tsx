@@ -140,9 +140,9 @@ export default function WhyChooseUs() {
           {reasons.map((reason) => (
             <div
               key={reason.title}
-              className="flex gap-4 p-5 rounded-2xl border border-[var(--border)] bg-[var(--background)] hover:border-[var(--brand-green)] hover:shadow-sm transition-all"
+              className="flex gap-4 p-5 rounded-2xl border border-[var(--border)] bg-[var(--background)] hover:border-[var(--brand-blue-deep)] hover:shadow-sm transition-all"
             >
-              <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[var(--secondary)] text-[var(--brand-green)] flex items-center justify-center">
+              <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[var(--secondary)] text-[var(--brand-blue-deep)] flex items-center justify-center">
                 {reason.icon}
               </div>
               <div>
@@ -165,7 +165,7 @@ export default function WhyChooseUs() {
             </p>
             <a
               href="#contact"
-              className="self-start bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
+              className="self-start bg-[var(--brand-blue-deep)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
             >
               Schedule Your Tour Today
             </a>

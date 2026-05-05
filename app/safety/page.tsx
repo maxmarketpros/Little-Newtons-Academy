@@ -140,7 +140,7 @@ export default function SafetyPage() {
     <>
       <JsonLd data={buildBreadcrumbs([{ name: 'Home', url: '/' }, { name: 'Safety & Trust', url: '/safety' }])} />
       {/* Hero */}
-      <section className="py-20 bg-[var(--brand-cream)]">
+      <section className="py-20 cream-pattern-bg">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -157,7 +157,7 @@ export default function SafetyPage() {
               <div className="flex flex-wrap gap-4 mb-8">
                 {['DCF Licensed', 'VPK Certified', 'USDA Meals'].map((badge) => (
                   <div key={badge} className="flex items-center gap-2">
-                    <div className="w-6 h-6 rounded-full bg-[var(--brand-green)] flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-[var(--brand-blue-deep)] flex items-center justify-center flex-shrink-0">
                       <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" className="w-3.5 h-3.5">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
@@ -168,7 +168,7 @@ export default function SafetyPage() {
               </div>
               <Link
                 href="/schedule-a-tour"
-                className="inline-block bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
+                className="inline-block bg-[var(--brand-blue-deep)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
               >
                 Schedule a Tour
               </Link>
@@ -204,7 +204,7 @@ export default function SafetyPage() {
                 key={feature.title}
                 className="bg-[var(--background)] rounded-2xl p-6 flex flex-col gap-4 border border-[var(--border)] hover:shadow-md transition-shadow"
               >
-                <div className="w-12 h-12 rounded-xl bg-[var(--secondary)] text-[var(--brand-green)] flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-[var(--secondary)] text-[var(--brand-blue-deep)] flex items-center justify-center flex-shrink-0">
                   {feature.icon}
                 </div>
                 <div>
@@ -218,7 +218,7 @@ export default function SafetyPage() {
       </section>
 
       {/* Deep Dive */}
-      <section className="py-20 bg-[var(--brand-cream)]">
+      <section className="py-20 cream-pattern-bg">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center mb-14">
             <span className="inline-block text-[var(--brand-sky)] font-bold text-sm tracking-widest uppercase mb-4">
@@ -241,7 +241,7 @@ export default function SafetyPage() {
                   <div className="flex flex-col gap-2.5">
                     {item.points.map((point) => (
                       <div key={point} className="flex items-center gap-2.5">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4 text-[var(--brand-green)] flex-shrink-0">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4 text-[var(--brand-blue-deep)] flex-shrink-0">
                           <polyline points="20 6 9 17 4 12" />
                         </svg>
                         <span className="text-[var(--foreground)] text-sm font-medium">{point}</span>
@@ -280,7 +280,7 @@ export default function SafetyPage() {
               <div className="grid sm:grid-cols-2 gap-4">
                 {communicationFeatures.map((feature) => (
                   <div key={feature.title} className="flex gap-3">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[var(--secondary)] text-[var(--brand-green)] flex items-center justify-center">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[var(--secondary)] text-[var(--brand-blue-deep)] flex items-center justify-center">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
@@ -298,9 +298,9 @@ export default function SafetyPage() {
       </section>
 
       {/* Certifications Banner */}
-      <section className="py-20 bg-[var(--brand-cream)]">
+      <section className="py-20 cream-pattern-bg">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="bg-[var(--brand-green)] rounded-3xl p-8 sm:p-10">
+          <div className="bg-[var(--brand-blue-deep)] rounded-3xl p-8 sm:p-10">
             <div className="text-center mb-8">
               <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[var(--primary-foreground)] mb-2">
                 Trusted. Certified. Compliant.

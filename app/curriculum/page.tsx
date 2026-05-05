@@ -78,7 +78,7 @@ const readinessSkills = [
     title: 'Social & Emotional Development',
     description: 'Kindergarten readiness goes beyond academics. Children develop the life skills that help them thrive in a classroom environment.',
     points: ['Confidence and independence', 'Cooperation and teamwork', 'Following directions and routines', 'Expressing emotions in healthy ways'],
-    color: 'var(--brand-green)',
+    color: '#2d7a3a',
     bg: '#edf7ef',
   },
 ]
@@ -107,7 +107,7 @@ export default function CurriculumPage() {
     <>
       <JsonLd data={buildBreadcrumbs([{ name: 'Home', url: '/' }, { name: 'Curriculum', url: '/curriculum' }])} />
       {/* Hero */}
-      <section className="py-20 bg-[var(--brand-cream)]">
+      <section className="py-20 cream-pattern-bg">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -122,7 +122,7 @@ export default function CurriculumPage() {
               </p>
               <Link
                 href="/schedule-a-tour"
-                className="inline-block bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
+                className="inline-block bg-[var(--brand-blue-deep)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
               >
                 Schedule a Tour
               </Link>
@@ -168,7 +168,7 @@ export default function CurriculumPage() {
               <div className="flex flex-col gap-3">
                 {curriculumPrinciples.map((principle) => (
                   <div key={principle} className="flex items-center gap-2.5">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4 text-[var(--brand-green)] flex-shrink-0">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4 text-[var(--brand-blue-deep)] flex-shrink-0">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
                     <span className="text-[var(--foreground)] text-sm font-medium">{principle}</span>
@@ -181,7 +181,7 @@ export default function CurriculumPage() {
       </section>
 
       {/* STEAM Grid */}
-      <section className="py-20 bg-[var(--brand-cream)]">
+      <section className="py-20 cream-pattern-bg">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center mb-14">
             <span className="inline-block text-[var(--brand-sky)] font-bold text-sm tracking-widest uppercase mb-4">
@@ -255,7 +255,7 @@ export default function CurriculumPage() {
       </section>
 
       {/* The Distinction */}
-      <section className="py-20 bg-[var(--brand-cream)]">
+      <section className="py-20 cream-pattern-bg">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -268,7 +268,7 @@ export default function CurriculumPage() {
               <div className="flex flex-col gap-6">
                 {distinctions.map((item) => (
                   <div key={item.title} className="flex gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[var(--secondary)] text-[var(--brand-green)] flex items-center justify-center">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[var(--secondary)] text-[var(--brand-blue-deep)] flex items-center justify-center">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-5 h-5">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
@@ -296,7 +296,7 @@ export default function CurriculumPage() {
       {/* Standards Banner */}
       <section className="py-20 bg-[var(--background)]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="bg-[var(--brand-green)] rounded-3xl p-8 sm:p-10">
+          <div className="bg-[var(--brand-blue-deep)] rounded-3xl p-8 sm:p-10">
             <div className="text-center mb-8">
               <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[var(--primary-foreground)] mb-2">
                 Aligned with Recognized Standards

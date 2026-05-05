@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const schedule = [
   {
@@ -76,13 +77,13 @@ export default function DailySchedule() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/5" />
-                <span className="absolute top-4 left-4 bg-[var(--brand-green)] text-[var(--primary-foreground)] text-xs font-bold px-3 py-1.5 rounded-full">
+                <span className="absolute top-4 left-4 bg-[var(--brand-blue-deep)] text-[var(--primary-foreground)] text-xs font-bold px-3 py-1.5 rounded-full">
                   {item.time}
                 </span>
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-7 h-7 rounded-full bg-[var(--secondary)] flex items-center justify-center text-[var(--brand-green)] font-bold text-xs flex-shrink-0">
+                  <div className="w-7 h-7 rounded-full bg-[var(--secondary)] flex items-center justify-center text-[var(--brand-blue-deep)] font-bold text-xs flex-shrink-0">
                     {index + 1}
                   </div>
                   <h3 className="font-bold text-[var(--foreground)]">{item.title}</h3>
@@ -91,6 +92,15 @@ export default function DailySchedule() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <Link
+            href="/schedule-a-tour"
+            className="bg-[var(--brand-blue-deep)] text-[var(--primary-foreground)] font-bold px-7 py-3.5 rounded-full hover:opacity-90 transition-opacity"
+          >
+            Schedule a Tour
+          </Link>
         </div>
       </div>
     </section>

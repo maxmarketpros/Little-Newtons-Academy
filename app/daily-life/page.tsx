@@ -148,7 +148,7 @@ export default function DailyLifePage() {
     <>
       <JsonLd data={buildBreadcrumbs([{ name: 'Home', url: '/' }, { name: 'A Day at Little Newtons', url: '/daily-life' }])} />
       {/* Hero */}
-      <section className="py-20 bg-[var(--brand-cream)]">
+      <section className="py-20 cream-pattern-bg">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -164,7 +164,7 @@ export default function DailyLifePage() {
               </p>
               <Link
                 href="/schedule-a-tour"
-                className="inline-block bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
+                className="inline-block bg-[var(--brand-blue-deep)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
               >
                 Schedule a Tour
               </Link>
@@ -203,7 +203,7 @@ export default function DailyLifePage() {
                 <div key={item.title} className="grid lg:grid-cols-[140px_1fr] gap-6 lg:gap-10 items-start">
                   {/* Time badge */}
                   <div className="flex lg:flex-col items-center lg:items-end gap-3 lg:gap-0">
-                    <div className="relative z-10 bg-[var(--brand-green)] text-[var(--primary-foreground)] text-xs font-bold px-3 py-1.5 rounded-full whitespace-nowrap">
+                    <div className="relative z-10 bg-[var(--brand-blue-deep)] text-[var(--primary-foreground)] text-xs font-bold px-3 py-1.5 rounded-full whitespace-nowrap">
                       {item.time}
                     </div>
                     {index < timeline.length - 1 && (
@@ -229,7 +229,7 @@ export default function DailyLifePage() {
       </section>
 
       {/* Enrichment Grid */}
-      <section className="py-20 bg-[var(--brand-cream)]">
+      <section className="py-20 cream-pattern-bg">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center mb-14">
             <span className="inline-block text-[var(--brand-sky)] font-bold text-sm tracking-widest uppercase mb-4">
@@ -249,7 +249,7 @@ export default function DailyLifePage() {
                 key={item.title}
                 className="flex gap-4 p-5 rounded-2xl border border-[var(--border)] bg-[var(--background)] hover:shadow-md transition-shadow"
               >
-                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[var(--secondary)] text-[var(--brand-green)] flex items-center justify-center">
+                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[var(--secondary)] text-[var(--brand-blue-deep)] flex items-center justify-center">
                   {item.icon}
                 </div>
                 <div>

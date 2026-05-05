@@ -126,7 +126,7 @@ export default function LocationsPage() {
       <JsonLd data={childCareSchema(HEATHROW_CAMPUS)} />
       <JsonLd data={childCareSchema(LAKE_MARY_CAMPUS)} />
       {/* Hero */}
-      <section className="py-20 bg-[var(--brand-cream)]">
+      <section className="py-20 cream-pattern-bg">
         <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
           <span className="inline-block text-[var(--brand-sky)] font-bold text-sm tracking-widest uppercase mb-4">
             Our Locations
@@ -140,13 +140,13 @@ export default function LocationsPage() {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
               href="#heathrow"
-              className="bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
+              className="bg-[var(--brand-blue-deep)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
             >
               Heathrow Campus
             </a>
             <a
               href="#lake-mary"
-              className="border-2 border-[var(--brand-green)] text-[var(--brand-green)] font-bold px-8 py-3.5 rounded-full hover:bg-[var(--secondary)] transition-colors"
+              className="border-2 border-[var(--brand-blue-deep)] text-[var(--brand-blue-deep)] font-bold px-8 py-3.5 rounded-full hover:bg-[var(--secondary)] transition-colors"
             >
               Lake Mary Campus
             </a>
@@ -168,37 +168,37 @@ export default function LocationsPage() {
             </div>
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <span className="w-3 h-3 rounded-full bg-[var(--brand-green)]" />
-                <span className="font-bold text-[var(--brand-green)] text-sm uppercase tracking-wide">Heathrow Campus</span>
+                <span className="w-3 h-3 rounded-full bg-[var(--brand-blue-deep)]" />
+                <span className="font-bold text-[var(--brand-blue-deep)] text-sm uppercase tracking-wide">Heathrow Campus</span>
               </div>
               <h2 className="font-serif text-3xl font-bold text-[var(--foreground)] mb-6">
                 Little Newtons Academy – Heathrow
               </h2>
               <div className="flex flex-col gap-3 mb-6 text-[var(--foreground)]">
                 <div className="flex items-start gap-3">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 text-[var(--brand-green)] flex-shrink-0 mt-0.5">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 text-[var(--brand-blue-deep)] flex-shrink-0 mt-0.5">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
                   <span className="text-sm">1032 AAA Drive, Lake Mary, FL 32746</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 text-[var(--brand-green)] flex-shrink-0">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 text-[var(--brand-blue-deep)] flex-shrink-0">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
                   </svg>
-                  <a href="tel:4077324413" className="text-sm font-semibold text-[var(--brand-green)] hover:underline">(407) 732-4413</a>
+                  <a href="tel:4077324413" className="text-sm font-semibold text-[var(--brand-blue-deep)] hover:underline">(407) 732-4413</a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 text-[var(--brand-green)] flex-shrink-0">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 text-[var(--brand-blue-deep)] flex-shrink-0">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                     <polyline points="22,6 12,13 2,6" />
                   </svg>
-                  <a href="mailto:heathrow@littlenewtonsacademy.com" className="text-sm font-semibold text-[var(--brand-green)] hover:underline">heathrow@littlenewtonsacademy.com</a>
+                  <a href="mailto:heathrow@littlenewtonsacademy.com" className="text-sm font-semibold text-[var(--brand-blue-deep)] hover:underline">heathrow@littlenewtonsacademy.com</a>
                 </div>
               </div>
               <div className="flex flex-wrap gap-2 mb-6">
                 {['Infant', 'Toddler', 'Preschool', 'VPK'].map((program) => (
-                  <span key={program} className="text-xs font-semibold px-3 py-1 rounded-full bg-[var(--secondary)] text-[var(--brand-green)]">
+                  <span key={program} className="text-xs font-semibold px-3 py-1 rounded-full bg-[var(--secondary)] text-[var(--brand-blue-deep)]">
                     {program}
                   </span>
                 ))}
@@ -206,7 +206,7 @@ export default function LocationsPage() {
               <p className="text-[var(--muted-foreground)] text-xs mb-6">DCF License # C18SE0335</p>
               <Link
                 href="/schedule-a-tour"
-                className="inline-block bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
+                className="inline-block bg-[var(--brand-blue-deep)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
               >
                 Schedule a Tour at Heathrow
               </Link>
@@ -229,7 +229,7 @@ export default function LocationsPage() {
       </section>
 
       {/* Lake Mary Location */}
-      <section id="lake-mary" className="py-20 bg-[var(--brand-cream)]">
+      <section id="lake-mary" className="py-20 cream-pattern-bg">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="lg:order-2">
@@ -252,29 +252,29 @@ export default function LocationsPage() {
               </h2>
               <div className="flex flex-col gap-3 mb-6 text-[var(--foreground)]">
                 <div className="flex items-start gap-3">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 text-[var(--brand-green)] flex-shrink-0 mt-0.5">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 text-[var(--brand-blue-deep)] flex-shrink-0 mt-0.5">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
                   <span className="text-sm">2720 W. Lake Mary Blvd, Lake Mary, FL 32746</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 text-[var(--brand-green)] flex-shrink-0">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 text-[var(--brand-blue-deep)] flex-shrink-0">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
                   </svg>
-                  <a href="tel:4073231221" className="text-sm font-semibold text-[var(--brand-green)] hover:underline">(407) 323-1221</a>
+                  <a href="tel:4073231221" className="text-sm font-semibold text-[var(--brand-blue-deep)] hover:underline">(407) 323-1221</a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 text-[var(--brand-green)] flex-shrink-0">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 text-[var(--brand-blue-deep)] flex-shrink-0">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                     <polyline points="22,6 12,13 2,6" />
                   </svg>
-                  <a href="mailto:lakemary@littlenewtonsacademy.com" className="text-sm font-semibold text-[var(--brand-green)] hover:underline">lakemary@littlenewtonsacademy.com</a>
+                  <a href="mailto:lakemary@littlenewtonsacademy.com" className="text-sm font-semibold text-[var(--brand-blue-deep)] hover:underline">lakemary@littlenewtonsacademy.com</a>
                 </div>
               </div>
               <div className="flex flex-wrap gap-2 mb-6">
                 {['Infant', 'Toddler', 'Preschool', 'VPK'].map((program) => (
-                  <span key={program} className="text-xs font-semibold px-3 py-1 rounded-full bg-[var(--secondary)] text-[var(--brand-green)]">
+                  <span key={program} className="text-xs font-semibold px-3 py-1 rounded-full bg-[var(--secondary)] text-[var(--brand-blue-deep)]">
                     {program}
                   </span>
                 ))}
@@ -282,7 +282,7 @@ export default function LocationsPage() {
               <p className="text-[var(--muted-foreground)] text-xs mb-6">DCF License # C18SE031</p>
               <Link
                 href="/schedule-a-tour"
-                className="inline-block bg-[var(--brand-green)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
+                className="inline-block bg-[var(--brand-blue-deep)] text-[var(--primary-foreground)] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
               >
                 Schedule a Tour at Lake Mary
               </Link>
@@ -322,7 +322,7 @@ export default function LocationsPage() {
                 key={feature.title}
                 className="flex gap-4 p-5 rounded-2xl border border-[var(--border)] bg-[var(--background)] hover:shadow-md transition-shadow"
               >
-                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[var(--secondary)] text-[var(--brand-green)] flex items-center justify-center">
+                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[var(--secondary)] text-[var(--brand-blue-deep)] flex items-center justify-center">
                   {feature.icon}
                 </div>
                 <div>
@@ -336,7 +336,7 @@ export default function LocationsPage() {
       </section>
 
       {/* Facility Gallery */}
-      <section className="py-20 bg-[var(--brand-cream)]">
+      <section className="py-20 cream-pattern-bg">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center mb-10">
             <h2 className="font-serif text-2xl font-bold text-[var(--foreground)]">Our Facilities</h2>
