@@ -94,7 +94,7 @@ export default function Navbar() {
 
       {/* Main navbar */}
       <header
-        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        className={`relative lg:sticky lg:top-0 z-50 w-full transition-all duration-300 ${
           scrolled ? 'bg-[var(--background)] shadow-md' : 'bg-[var(--background)]'
         }`}
       >
