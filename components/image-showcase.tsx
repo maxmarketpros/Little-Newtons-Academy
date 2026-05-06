@@ -6,7 +6,7 @@ export default function ImageShowcase() {
       {/* Rounded image container */}
       <div className="relative h-[45vh] sm:h-[50vh] rounded-3xl overflow-hidden shadow-2xl">
         <Image
-          src="/images/playground-adventure.jpg"
+          src="/images/client-new-magnifying.jpg"
           alt="Children playing and dancing outdoors at Little Newtons Academy"
           fill
           className="object-cover object-center"

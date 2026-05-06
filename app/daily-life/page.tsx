@@ -23,57 +23,57 @@ const timeline = [
     time: '7:00 – 8:30 AM',
     title: 'Healthy Start',
     description: 'Children begin the day with a fresh, nutritious USDA-approved breakfast that fuels their morning. This calm start helps children transition into the school day, build healthy eating habits, and socialize with classmates.',
-    image: '/images/daily-healthy-start.jpg',
-    imageAlt: 'Children enjoying a healthy breakfast at Little Newtons Academy',
+    image: '/images/client-new-lunch-broccoli.jpg',
+    imageAlt: 'Children enjoying a healthy meal at Little Newtons Academy',
   },
   {
     time: '8:30 – 9:00 AM',
     title: 'Morning Circle Time',
     description: 'The day begins together as children gather with their teacher to greet classmates, discuss the day\'s theme, and explore early literacy and math concepts. This group time builds language skills, listening skills, and a sense of community.',
-    image: '/images/daily-circle-time.jpg',
+    image: '/images/client-new-circle-time.jpg',
     imageAlt: 'Children in morning circle time with their teacher',
   },
   {
     time: '9:00 – 10:30 AM',
     title: 'Learning Centers',
     description: 'Children rotate through hands-on learning centers including art and creativity, reading and storytelling, building and problem solving, science and discovery, and sensory play. Teachers guide each child through activities tailored to their developmental level.',
-    image: '/images/science-experiment.jpg',
-    imageAlt: 'Children exploring hands-on learning activities',
+    image: '/images/client-new-science.jpg',
+    imageAlt: 'Children exploring hands-on science activities',
   },
   {
     time: '10:30 – 11:30 AM',
     title: 'Outdoor Play',
     description: 'Outdoor time allows children to run, climb, and develop gross motor skills while playing group games, exploring nature, and building friendships. Active play supports physical development, coordination, and social growth.',
-    image: '/images/daily-outdoor-play.jpg',
-    imageAlt: 'Children playing outdoors at Little Newtons Academy',
+    image: '/images/client-new-soccer.jpg',
+    imageAlt: 'Children playing soccer outdoors at Little Newtons Academy',
   },
   {
     time: '11:30 AM – 12:00 PM',
     title: 'Lunch Time',
     description: 'Children enjoy a healthy, USDA CCFP-approved lunch while practicing conversation, independence, and positive table manners. Mealtime is a social experience that reinforces healthy habits and community.',
-    image: '/images/daily-lunch-rest.jpg',
+    image: '/images/client-new-lunch-served.jpg',
     imageAlt: 'Children enjoying lunch together',
   },
   {
     time: '12:00 – 2:00 PM',
     title: 'Rest & Quiet Time',
     description: 'After a busy morning, children have nap or quiet rest time to recharge. Younger children nap while older children may enjoy quiet activities like books, puzzles, or calm creative play.',
-    image: '/images/8.jpg',
-    imageAlt: 'Calm rest time at Little Newtons Academy',
+    image: '/images/client-new-girl-focused.jpg',
+    imageAlt: 'A child focused on a quiet activity during rest time',
   },
   {
     time: '2:00 – 4:00 PM',
     title: 'Afternoon Exploration',
     description: 'The afternoon continues with creative activities, learning centers, and play that reinforce skills learned earlier in the day. Children have snack time and engage in enrichment activities that keep learning fresh and exciting.',
-    image: '/images/10.jpg',
-    imageAlt: 'Children engaged in afternoon exploration activities',
+    image: '/images/client-new-art-paint.jpg',
+    imageAlt: 'Children engaged in afternoon art and exploration activities',
   },
   {
     time: 'Throughout the Week',
     title: 'Special Events & Enrichment',
     description: 'Throughout the year, children participate in music and movement, themed activities, seasonal celebrations, and special events that keep learning exciting and build confidence, creativity, and community.',
-    image: '/images/client-music-2.jpg',
-    imageAlt: 'Children enjoying music and enrichment activities',
+    image: '/images/client-new-parachute.jpg',
+    imageAlt: 'Children enjoying enrichment activities with a rainbow parachute',
   },
 ]
 
@@ -171,8 +171,8 @@ export default function DailyLifePage() {
             </div>
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
               <Image
-                src="/images/daily-circle-time.jpg"
-                alt="Children in circle time at Little Newtons Academy"
+                src="/images/client-new-welcome-group.jpg"
+                alt="Smiling children on a classroom rug at Little Newtons Academy"
                 fill
                 className="object-cover"
                 priority
@@ -267,9 +267,9 @@ export default function DailyLifePage() {
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-3 gap-4">
             {[
-              { src: '/images/client-earthday-2.jpg', alt: 'Earth Day activities at Little Newtons' },
-              { src: '/images/playground-play.jpg', alt: 'Children playing outdoors' },
-              { src: '/images/client-spring-2.jpg', alt: 'Spring activities at Little Newtons Academy' },
+              { src: '/images/client-new-art-yarn.jpg', alt: 'Yarn weaving art project at Little Newtons' },
+              { src: '/images/client-new-playground-structure.jpg', alt: 'Children climbing on the playground structure' },
+              { src: '/images/client-new-magnifying.jpg', alt: 'Children exploring with magnifying glasses' },
             ].map((photo) => (
               <div key={photo.src} className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                 <Image src={photo.src} alt={photo.alt} fill className="object-cover" />

@@ -30,32 +30,32 @@ const steamCards = [
   {
     title: 'Science',
     description: 'Children observe, question, and experiment — building a foundation of scientific thinking through hands-on exploration of the natural world.',
-    image: '/images/science-experiment.jpg',
-    imageAlt: 'Children doing science experiments',
+    image: '/images/client-new-science.jpg',
+    imageAlt: 'Teacher and students with colored beakers in a science activity',
   },
   {
     title: 'Technology & Engineering',
     description: 'Through building, problem-solving, and early engineering challenges, children develop logical thinking and learn to create solutions.',
-    image: '/images/client-science-2.jpg',
-    imageAlt: 'Children building and problem-solving',
+    image: '/images/client-new-blocks.jpg',
+    imageAlt: 'Two boys building and problem-solving with blocks',
   },
   {
     title: 'Art & Creativity',
     description: 'Art is a language for young children. Through painting, sculpting, and creative expression, children develop fine motor skills and imaginative thinking.',
-    image: '/images/client-spring-3.jpg',
-    imageAlt: 'Children creating art at Little Newtons Academy',
+    image: '/images/client-new-art-paint.jpg',
+    imageAlt: 'Children making art with paint bottles at Little Newtons Academy',
   },
   {
     title: 'Math & Logic',
     description: 'Counting, sorting, patterns, and comparing — math concepts come alive through playful, hands-on activities that make learning exciting.',
-    image: '/images/playground-sensory.jpg',
-    imageAlt: 'Children engaged in hands-on learning activities',
+    image: '/images/client-new-toddler-puzzles.jpg',
+    imageAlt: 'Toddlers building hands-on logic skills with wooden puzzles',
   },
   {
     title: 'Exploration & Discovery',
     description: 'Sensory play, nature walks, and open-ended exploration encourage children to ask questions, make connections, and understand the world around them.',
-    image: '/images/client-earthday-2.jpg',
-    imageAlt: 'Children exploring nature and discovery activities',
+    image: '/images/client-new-girl-focused.jpg',
+    imageAlt: 'A focused student exploring learning manipulatives',
   },
 ]
 
@@ -129,8 +129,8 @@ export default function CurriculumPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
               <Image
-                src="/images/science-focused.jpg"
-                alt="Children focused on learning activities at Little Newtons Academy"
+                src="/images/client-new-magnifying.jpg"
+                alt="Curious children exploring with magnifying glasses at Little Newtons Academy"
                 fill
                 className="object-cover"
                 priority
@@ -146,7 +146,7 @@ export default function CurriculumPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
               <Image
-                src="/images/facility-classroom.jpg"
+                src="/images/client-new-circle-reading.jpg"
                 alt="Bright classroom set up for Creative Curriculum activities"
                 fill
                 className="object-cover"
@@ -283,8 +283,8 @@ export default function CurriculumPage() {
             </div>
             <div className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-lg">
               <Image
-                src="/images/client-facility-3.jpg"
-                alt="Thoughtfully designed learning environment at Little Newtons Academy"
+                src="/images/client-new-girl-future.jpg"
+                alt="A student learning under 'The Future of the World is in This Room' classroom wall"
                 fill
                 className="object-cover"
               />

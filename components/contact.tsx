@@ -286,8 +286,8 @@ export default function Contact() {
             {/* Photo */}
             <div className="relative aspect-[3/2] sm:aspect-[4/3] rounded-2xl overflow-hidden">
               <Image
-                src="/images/client-facility-1.jpg"
-                alt="Little Newtons Academy facility"
+                src="/images/client-new-heathrow-exterior.jpg"
+                alt="Little Newtons Academy Heathrow campus exterior"
                 fill
                 className="object-cover"
               />

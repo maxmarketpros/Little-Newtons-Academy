@@ -90,24 +90,24 @@ export default function Testimonials() {
         <div className="mt-12 grid grid-cols-3 gap-4 rounded-3xl overflow-hidden">
           <div className="relative aspect-[4/3]">
             <Image
-              src="/images/playground-friends.jpg"
-              alt="Two children smiling at Little Newtons Academy"
+              src="/images/client-new-highfive.jpg"
+              alt="Teacher high-fiving a student at Little Newtons Academy"
               fill
               className="object-cover"
             />
           </div>
           <div className="relative aspect-[4/3]">
             <Image
-              src="/images/playground-jumping.jpg"
-              alt="Children jumping and playing at Little Newtons Academy"
+              src="/images/client-new-soccer.jpg"
+              alt="Children playing soccer outdoors at Little Newtons Academy"
               fill
               className="object-cover"
             />
           </div>
           <div className="relative aspect-[4/3]">
             <Image
-              src="/images/playground-sensory.jpg"
-              alt="Children doing sensory play at Little Newtons Academy"
+              src="/images/client-new-welcome-group.jpg"
+              alt="Smiling children in a Little Newtons Academy classroom"
               fill
               className="object-cover"
             />

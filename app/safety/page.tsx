@@ -107,24 +107,24 @@ const deepDive = [
     description:
       'Every entrance to our campus is secured with controlled access systems. Parents and authorized individuals follow a strict check-in and check-out process. Our 24-hour surveillance camera system covers all classrooms, hallways, and outdoor areas, providing complete visibility and an added layer of accountability.',
     points: ['Controlled entry with locked doors', 'Strict sign-in/sign-out protocols', '24-hour camera surveillance campus-wide', 'Only authorized individuals permitted'],
-    image: '/images/client-facility-2.jpg',
-    imageAlt: 'Secure entrance at Little Newtons Academy',
+    image: '/images/client-new-infant-teddy.jpg',
+    imageAlt: 'Teacher caring for an infant in a secure classroom at Little Newtons Academy',
   },
   {
     title: 'Trained & Certified Staff',
     description:
       'Our teachers are more than educators — they are trained safety professionals. Every staff member holds current CPR and First Aid certifications, participates in ongoing professional development, and is committed to maintaining the highest standards of child safety and supervision.',
     points: ['CPR & First Aid certified team', 'Ongoing safety training', 'Background-checked staff', 'Consistent supervision ratios'],
-    image: '/images/client-facility-4.jpg',
-    imageAlt: 'Caring teachers at Little Newtons Academy',
+    image: '/images/client-new-highfive.jpg',
+    imageAlt: 'Teacher engaging warmly with a student at Little Newtons Academy',
   },
   {
     title: 'Health & Cleanliness Standards',
     description:
       'A clean environment is a safe environment. Our classrooms are sanitized daily using child-safe cleaning products. We teach children proper hand-washing techniques, maintain strict illness policies, and serve nutritious USDA-approved meals that support healthy growth and development.',
     points: ['Daily classroom sanitization', 'Hand hygiene routines taught', 'USDA CCFP approved nutrition', 'Strict illness and wellness policies'],
-    image: '/images/client-facility-6.jpg',
-    imageAlt: 'Clean, organized classroom at Little Newtons Academy',
+    image: '/images/client-new-lunch-served.jpg',
+    imageAlt: 'Children enjoying a clean, healthy USDA-approved meal at Little Newtons Academy',
   },
 ]
 
@@ -175,8 +175,8 @@ export default function SafetyPage() {
             </div>
             <div className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-xl">
               <Image
-                src="/images/client-facility-7.jpg"
-                alt="Safe and secure facility at Little Newtons Academy"
+                src="/images/client-new-buggy-logo.jpg"
+                alt="Teachers and infants in front of the Little Newtons Academy logo wall"
                 fill
                 className="object-cover"
                 priority
@@ -261,8 +261,8 @@ export default function SafetyPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
               <Image
-                src="/images/playground-friends.jpg"
-                alt="Happy children playing together at Little Newtons Academy"
+                src="/images/client-new-infant-lift.jpg"
+                alt="Teacher lifting a smiling baby — warm parent communication moment"
                 fill
                 className="object-cover"
               />

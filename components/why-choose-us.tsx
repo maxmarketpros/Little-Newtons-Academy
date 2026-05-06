@@ -172,7 +172,7 @@ export default function WhyChooseUs() {
           </div>
           <div className="relative aspect-[4/3] lg:aspect-auto lg:h-auto">
             <Image
-              src="/images/facility-play-structure.jpg"
+              src="/images/client-new-playground-structure.jpg"
               alt="Colorful play structure at Little Newtons Academy"
               fill
               className="object-cover"

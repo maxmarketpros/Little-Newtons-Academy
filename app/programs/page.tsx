@@ -35,8 +35,8 @@ const programs = [
       'Experience music, textures, and visual stimulation',
     ],
     tagline: 'A foundation of trust, comfort, and care',
-    image: '/images/facility-infant-room.jpg',
-    imageAlt: 'Warm infant room at Little Newtons Academy',
+    image: '/images/client-new-infant-playmat.jpg',
+    imageAlt: 'Teacher with infants on a play mat at Little Newtons Academy',
     color: 'var(--brand-sky)',
     bg: '#eef9fc',
   },
@@ -56,8 +56,8 @@ const programs = [
       'Build fine and gross motor coordination',
     ],
     tagline: 'Curiosity turns into confidence',
-    image: '/images/science-goggles.jpg',
-    imageAlt: 'Child exploring with safety goggles during science activity',
+    image: '/images/client-new-toddler-puzzles.jpg',
+    imageAlt: 'Toddlers working on wooden puzzles with their teacher',
     color: 'var(--brand-lime)',
     bg: '#f4fbed',
   },
@@ -77,8 +77,8 @@ const programs = [
       'Strengthen problem-solving and critical thinking',
     ],
     tagline: 'Confidence in learning begins here',
-    image: '/images/facility-classroom.jpg',
-    imageAlt: 'Bright preschool classroom with learning centers',
+    image: '/images/client-new-playdoh.jpg',
+    imageAlt: 'Preschoolers doing playdoh art with their teacher',
     color: '#2d7a3a',
     bg: '#edf7ef',
   },
@@ -98,9 +98,8 @@ const programs = [
       'Social-emotional skills for group learning',
     ],
     tagline: 'Fully prepared for kindergarten success',
-    image: '/images/playground-confident.jpg',
-    imageAlt: 'Confident child ready for kindergarten',
-    imagePosition: 'center 20%',
+    image: '/images/client-new-careers.jpg',
+    imageAlt: 'Children dressed as chef, doctor, police officer and scientist — ready for kindergarten',
     color: '#e07c3a',
     bg: '#fef4ec',
   },
@@ -185,8 +184,8 @@ export default function ProgramsPage() {
             </div>
             <div className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-xl">
               <Image
-                src="/images/client-playground-1.jpg"
-                alt="Children playing and learning at Little Newtons Academy"
+                src="/images/client-new-welcome-group.jpg"
+                alt="Children smiling on a classroom rug at Little Newtons Academy"
                 fill
                 className="object-cover"
                 priority
@@ -306,10 +305,10 @@ export default function ProgramsPage() {
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { src: '/images/client-music-1.jpg', alt: 'Children enjoying music and movement activities' },
-              { src: '/images/client-science-1.jpg', alt: 'Hands-on science exploration at Little Newtons' },
-              { src: '/images/client-earthday-1.jpg', alt: 'Earth Day celebration activities' },
-              { src: '/images/client-spring-1.jpg', alt: 'Spring learning activities at Little Newtons Academy' },
+              { src: '/images/client-new-parachute.jpg', alt: 'Children playing with a rainbow parachute outdoors' },
+              { src: '/images/client-new-science.jpg', alt: 'Hands-on science exploration at Little Newtons' },
+              { src: '/images/client-new-art-yarn.jpg', alt: 'Yarn weaving art project with teacher and students' },
+              { src: '/images/client-new-art-paint.jpg', alt: 'Art class with paint bottles at Little Newtons Academy' },
             ].map((photo) => (
               <div key={photo.src} className="relative aspect-[3/4] rounded-2xl overflow-hidden">
                 <Image src={photo.src} alt={photo.alt} fill className="object-cover" />

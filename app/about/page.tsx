@@ -192,8 +192,8 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
               <Image
-                src="/images/client-playground-1.jpg"
-                alt="Children playing together at Little Newtons Academy playground"
+                src="/images/client-new-highfive.jpg"
+                alt="Teacher high-fiving a smiling student at Little Newtons Academy"
                 fill
                 className="object-cover"
                 priority
@@ -209,8 +209,8 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative aspect-square lg:aspect-auto lg:h-[520px] rounded-3xl overflow-hidden shadow-lg">
               <Image
-                src="/images/client-music-1.jpg"
-                alt="Children enjoying music and movement at Little Newtons Academy"
+                src="/images/client-new-reading-flowers.jpg"
+                alt="Teacher reading a flower picture book to children at Little Newtons Academy"
                 fill
                 className="object-cover"
               />
@@ -317,9 +317,9 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-3 gap-4">
             {[
-              { src: '/images/client-earthday-3.jpg', alt: 'Children participating in Earth Day activities' },
-              { src: '/images/music-fabrics.jpg', alt: 'Creative play with fabrics and movement' },
-              { src: '/images/client-spring-1.jpg', alt: 'Spring activities at Little Newtons Academy' },
+              { src: '/images/client-new-magnifying.jpg', alt: 'Children exploring with magnifying glasses' },
+              { src: '/images/client-new-parachute.jpg', alt: 'Outdoor parachute play at Little Newtons Academy' },
+              { src: '/images/client-new-careers.jpg', alt: 'Children dressed as different professionals during dramatic play' },
             ].map((photo) => (
               <div key={photo.src} className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                 <Image src={photo.src} alt={photo.alt} fill className="object-cover" />

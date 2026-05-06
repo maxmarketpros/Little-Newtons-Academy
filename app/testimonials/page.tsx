@@ -153,9 +153,9 @@ export default function TestimonialsPage() {
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-3 gap-4">
             {[
-              { src: '/images/playground-friends.jpg', alt: 'Children building friendships at Little Newtons' },
-              { src: '/images/playground-jumping.jpg', alt: 'Active play and learning at Little Newtons Academy' },
-              { src: '/images/client-playground-3.jpg', alt: 'Children enjoying outdoor play' },
+              { src: '/images/client-new-welcome-group.jpg', alt: 'Smiling children in a Little Newtons Academy classroom' },
+              { src: '/images/client-new-soccer.jpg', alt: 'Active outdoor play at Little Newtons Academy' },
+              { src: '/images/client-new-playground-structure.jpg', alt: 'Children enjoying the playground structure' },
             ].map((photo) => (
               <div key={photo.src} className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                 <Image src={photo.src} alt={photo.alt} fill className="object-cover" />

@@ -45,7 +45,7 @@ export default function Philosophy() {
           {/* Left: image */}
           <div className="relative rounded-3xl overflow-hidden aspect-square lg:aspect-auto lg:h-[520px] order-2 lg:order-1">
             <Image
-              src="/images/music-group.jpg"
+              src="/images/client-new-reading-flowers.jpg"
               alt="Children in a music and movement activity"
               fill
               className="object-cover"

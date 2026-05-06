@@ -160,8 +160,8 @@ export default function LocationsPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
               <Image
-                src="/images/client-facility-1.jpg"
-                alt="Little Newtons Academy Heathrow campus"
+                src="/images/client-new-heathrow-exterior.jpg"
+                alt="Little Newtons Academy Heathrow campus exterior"
                 fill
                 className="object-cover"
               />
@@ -235,8 +235,8 @@ export default function LocationsPage() {
             <div className="lg:order-2">
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/lake-mary-campus.png"
-                  alt="Little Newtons Academy Lake Mary campus"
+                  src="/images/client-new-lakemary-exterior.jpg"
+                  alt="Little Newtons Academy Lake Mary campus exterior"
                   fill
                   className="object-cover"
                 />
@@ -343,10 +343,10 @@ export default function LocationsPage() {
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { src: '/images/facility-play-structure.jpg', alt: 'Play structure at Little Newtons Academy' },
-              { src: '/images/facility-playground.jpg', alt: 'Outdoor playground area' },
-              { src: '/images/client-facility-3.jpg', alt: 'Interior facility at Little Newtons' },
-              { src: '/images/client-facility-8.jpg', alt: 'Learning space at Little Newtons Academy' },
+              { src: '/images/client-new-playground-structure.jpg', alt: 'Play structure at Little Newtons Academy' },
+              { src: '/images/client-new-playground-slide.jpg', alt: 'Outdoor playground slide' },
+              { src: '/images/client-new-gym-basketball.jpg', alt: 'Indoor gymnasium with basketball hoop at Little Newtons' },
+              { src: '/images/client-new-buggy-logo.jpg', alt: 'Infants in our buggy in front of the Little Newtons Academy logo wall' },
             ].map((photo) => (
               <div key={photo.src} className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                 <Image src={photo.src} alt={photo.alt} fill className="object-cover" />
