@@ -7,7 +7,7 @@ export default function Hero() {
         <div className="flex flex-col lg:grid lg:grid-cols-2 lg:min-h-[calc(100vh-176px)]">
           {/* Content */}
           <div className="flex flex-col justify-center px-6 sm:px-10 lg:px-16 pt-10 sm:pt-14 lg:py-24 pb-8 lg:pb-24">
-            <span className="inline-block text-[var(--brand-blue)] font-bold text-xs lg:text-sm tracking-widest uppercase mb-3 lg:mb-4">
+            <span className="inline-block text-[var(--brand-blue)] font-bold text-base sm:text-lg lg:text-xl tracking-widest uppercase mb-4 lg:mb-5">
               Little Newtons Academy
             </span>
             <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[var(--foreground)] leading-tight text-balance mb-4 lg:mb-6">
@@ -25,13 +25,13 @@ export default function Hero() {
             </p>
 
             {/* Urgency badge */}
-            <div className="flex items-center gap-2 mb-6 lg:mb-8">
-              <span className="flex h-2.5 w-2.5 relative">
+            <div className="inline-flex items-center gap-2.5 self-start mb-6 lg:mb-8 px-4 py-2.5 rounded-full bg-[var(--brand-red)]/10 border-2 border-[var(--brand-red)]/30 shadow-sm">
+              <span className="flex h-3 w-3 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--brand-red)] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[var(--brand-red)]"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-[var(--brand-red)]"></span>
               </span>
-              <span className="text-[var(--brand-red)] font-semibold text-sm">
-                Limited enrollment spots available for 2026
+              <span className="text-[var(--brand-red)] font-bold text-sm sm:text-base lg:text-lg tracking-wide">
+                Limited 2026 Enrollment Spots Available
               </span>
             </div>
 
@@ -75,13 +75,13 @@ export default function Hero() {
               <span className="w-2 h-2 rounded-full bg-[var(--brand-sky)]" />
             </div>
 
-            <div className="relative aspect-[3/4] sm:aspect-[4/5] rounded-3xl overflow-hidden shadow-xl max-h-[500px] lg:absolute lg:inset-0 lg:aspect-auto lg:rounded-none lg:shadow-none lg:max-h-none">
+            <div className="relative aspect-[4/3] sm:aspect-[3/2] rounded-3xl overflow-hidden shadow-xl max-h-[500px] lg:absolute lg:inset-0 lg:aspect-auto lg:rounded-none lg:shadow-none lg:max-h-none">
               <Image
-                src="/images/playground-group.jpg"
-                alt="Happy children playing at Little Newtons Academy"
+                src="/images/client-new-girl-focused.jpg"
+                alt="A focused student at Little Newtons Academy working independently in the classroom"
                 fill
                 className="object-cover"
-                style={{ objectPosition: 'center 60%' }}
+                style={{ objectPosition: '70% 50%' }}
                 priority
               />
             </div>

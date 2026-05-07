@@ -197,7 +197,7 @@ export default function LocationsPage() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-2 mb-6">
-                {['Infant', 'Toddler', 'Preschool', 'VPK'].map((program) => (
+                {['Infant', 'Toddler', 'Preschool', 'VPK', 'Summer Camp'].map((program) => (
                   <span key={program} className="text-xs font-semibold px-3 py-1 rounded-full bg-[var(--secondary)] text-[var(--brand-blue-deep)]">
                     {program}
                   </span>
@@ -273,7 +273,7 @@ export default function LocationsPage() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-2 mb-6">
-                {['Infant', 'Toddler', 'Preschool', 'VPK'].map((program) => (
+                {['Toddler', 'Preschool', 'VPK', 'Before & After School', 'Summer Camp'].map((program) => (
                   <span key={program} className="text-xs font-semibold px-3 py-1 rounded-full bg-[var(--secondary)] text-[var(--brand-blue-deep)]">
                     {program}
                   </span>
